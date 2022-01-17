@@ -51,7 +51,7 @@ export const Footer = () => {
                     <h3 className="text-dark-blue font-bold text-xl">Newsletter</h3>
                     <p className="text-dark-blue my-2">Subscribe to our newsletter to receive updates on new features, releases, and product news.</p>
                     <form className="flex">
-                        <div className="mx-auto flex">
+                        <div className="mx-auto md:ml-0 flex">
                             <input type="email" className=" rounded-l-md border-l-2 border-t-2 border-b-2 p-2 inline " placeholder="Email Address" />
                             <button className="bg-light-blue text-white hover:bg-dark-blue inline duration-300 px-2 py-1 rounded-r-md font-bold" type="submit">Subscribe</button>
                         </div>
