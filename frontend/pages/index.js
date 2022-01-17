@@ -1,5 +1,10 @@
 import Head from 'next/head'
 import { Landing } from '../components/Landing'
+import { LeftTextWithButton } from '../components/TwoCol/LeftTextWithButton'
+import { MedSep } from '../components/Separators/MedSep'
+import Benefits from '../data/benefits.json'
+import { TriColCards } from '../components/Displays/TriColCards'
+import { Heading } from '../components/Text/Heading'
 export default function Home() {
   return (
     <>
@@ -17,6 +22,27 @@ export default function Home() {
         button1="Sign Up"
         link1="/signup"
       />
+      <MedSep />
+      <div className="container mx-auto px-4">
+        <LeftTextWithButton
+          title="The Future of Education"
+          desc="For no cost, underprivileged students around the nation are provided with remote stem opportunities focused in robotics. In these programs, students not only gain a foundation in key STEM principles but also advanced skills that give them an academic and professional edge.  Under strict rules and limited time and resources, teams of high school students are challenged to build industrial-size."
+          buttonText="Learn More"
+          buttonLink="/about"
+          pic="/first.png"
+        />
+
+        <MedSep />
+
+        <Heading desc="All of our programs are free and virtual!">Benefits</Heading>
+        <TriColCards
+          data={Benefits}
+        />
+
+        <MedSep />
+      </div>
+
+
     </>
   )
 }
