@@ -2,9 +2,13 @@ import Head from 'next/head'
 import { Landing } from '../components/Landing'
 import { LeftTextWithButton } from '../components/TwoCol/LeftTextWithButton'
 import { MedSep } from '../components/Separators/MedSep'
+import { SmallSep } from '../components/Separators/SmallSep'
 import Benefits from '../data/benefits.json'
 import { TriColCards } from '../components/Displays/TriColCards'
 import { Heading } from '../components/Text/Heading'
+import { RightTextWithButtonBuild } from '../components/TwoCol/RightTextWithButtonBuild'
+import { LeftTextWithButtonBuild } from '../components/TwoCol/LeftTextWithButtonBuild'
+
 export default function Home() {
   return (
     <>
@@ -37,6 +41,45 @@ export default function Home() {
         <Heading desc="All of our programs are free and virtual!">Benefits</Heading>
         <TriColCards
           data={Benefits}
+        />
+
+        <MedSep />
+        <Heading desc="Join us as we build robots!">Robot Builds</Heading>
+        <RightTextWithButtonBuild
+          title="Common Build"
+          desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. "
+          buttonText="Learn More"
+          buttonLink="/TODO"
+          keyword="Ages:"
+          answer="K-3"
+          pic="/common.png"
+          color="dark-green"
+          colorHover="darker-green"
+        />
+        <SmallSep />
+        <LeftTextWithButtonBuild
+          title="Challenge Build"
+          desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. "
+          buttonText="Learn More"
+          buttonLink="/TODO"
+          keyword="Ages:"
+          answer="4-7"
+          pic="/challenge.png"
+          color="light-blue"
+          colorHover="dark-blue"
+        />
+        <SmallSep />
+
+        <RightTextWithButtonBuild
+          title="Creative Build"
+          desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. "
+          buttonText="Learn More"
+          buttonLink="/TODO"
+          keyword="Ages:"
+          answer="8-12"
+          pic="/creative.png"
+          color="dark-blue"
+          colorHover="darker-blue"
         />
 
         <MedSep />
