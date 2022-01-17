@@ -12,7 +12,7 @@ export const LeftTextWithButtonBuild = ({ title, desc, pic, color, colorHover, k
                 <Button className={`bg-${color} text-white hover:bg-${colorHover} shadow-lg`} href={buttonLink}>{buttonText}</Button>
             </div>
             <div className="">
-                <img src={pic} alt={title} className="max-h-96 mx-auto lg:mr-0" />
+                <img src={pic} alt={title} className="max-h-96 mx-auto lg:mr-0 hidden lg:block" />
             </div>
         </div>
     )

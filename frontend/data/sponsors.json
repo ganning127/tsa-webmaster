@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Google",
+        "img": "/google.png",
+        "link": "https://www.google.com/"
+    },
+    {
+        "name": "Amazon",
+        "img": "/amazon.png",
+        "link": "https://www.amazon.com/"
+    },
+    {
+        "name": "Boeing",
+        "img": "/boeing.png",
+        "link": "https://www.boeing.com/"
+    },
+    {
+        "name": "Airbus",
+        "img": "/airbus.png",
+        "link": "https://www.airbus.com/"
+    },
+    {
+        "name": "Microsoft",
+        "img": "/microsoft.png",
+        "link": "https://www.microsoft.com/en-us/"
+    },
+    {
+        "name": "Apple",
+        "img": "/apple.png",
+        "link": "https://www.apple.com/"
+    }
+]

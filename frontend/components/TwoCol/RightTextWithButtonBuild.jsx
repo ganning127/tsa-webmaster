@@ -3,7 +3,7 @@ export const RightTextWithButtonBuild = ({ title, desc, pic, color, colorHover, 
     return (
         <div className="grid sm:grid-cols-1 lg:grid-cols-2 px-0 lg:px-20">
             <div className="">
-                <img src={pic} alt={title} className="max-h-96 mx-auto lg:ml-0" />
+                <img src={pic} alt={title} className="max-h-96 mx-auto lg:ml-0 hidden lg:block" />
             </div>
             <div className="max-w-lg m-auto text-center lg:text-right">
                 <h2 className={`text-5xl font-bold text-${color}`}>{title}</h2>
