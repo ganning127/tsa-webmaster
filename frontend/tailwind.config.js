@@ -14,6 +14,9 @@ module.exports = {
         "dark-sky": "#6388B4",
         "dark-gray": "#BFC0C0",
         "dark": "#262626",
+        "light-dark-blue": "#3D7B79",
+        "light-dark-gray": "#BFC0C0",
+        "dark-small-text": "#485555"
       },
       scale: {
         "115": "1.15"
