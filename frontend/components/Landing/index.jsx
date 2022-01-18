@@ -23,10 +23,10 @@ export const Landing = ({ title, desc, button1, link1 }) => {
                     <div className={`h-[60vh] bg-[url('/home.png')] bg-cover bg-center bg-no-repeat flex`}>
                         <div className="m-auto text-white text-center">
                             <h1 className="text-7xl font-bold">{title}</h1>
-                            <h3 className="italic text-3xl font-thin my-4">{desc}</h3>
-                            <a href={link1}>
+                            <h3 className="italic text-3xl font-normal my-4">{desc}</h3>
+                            {button1 && <a href={link1}>
                                 <button className="text-xl rounded-md bg-dark-sky px-8 py-2 shadow-xl hover:bg-dark-blue duration-300">{button1}</button>
-                            </a>
+                            </a>}
                         </div>
                     </div>
                 </SwiperSlide>
@@ -34,10 +34,10 @@ export const Landing = ({ title, desc, button1, link1 }) => {
                     <div className={`h-[60vh] bg-[url('/team.png')] bg-cover bg-center bg-no-repeat flex`}>
                         <div className="m-auto text-white text-center">
                             <h1 className="text-7xl font-bold">{title}</h1>
-                            <h3 className="italic text-3xl font-thin my-4">{desc}</h3>
-                            <a href={link1}>
+                            <h3 className="italic text-3xl font-normal my-4">{desc}</h3>
+                            {button1 && <a href={link1}>
                                 <button className="text-xl rounded-md bg-dark-sky px-8 py-2 shadow-xl hover:bg-dark-blue duration-300">{button1}</button>
-                            </a>
+                            </a>}
                         </div>
                     </div>
                 </SwiperSlide>
@@ -45,10 +45,10 @@ export const Landing = ({ title, desc, button1, link1 }) => {
                     <div className={`h-[60vh] bg-[url('/impact.png')] bg-cover bg-center bg-no-repeat flex`}>
                         <div className="m-auto text-white text-center">
                             <h1 className="text-7xl font-bold">{title}</h1>
-                            <h3 className="italic text-3xl font-thin my-4">{desc}</h3>
-                            <a href={link1}>
+                            <h3 className="italic text-3xl font-normal my-4">{desc}</h3>
+                            {button1 && <a href={link1}>
                                 <button className="text-xl rounded-md bg-dark-sky px-8 py-2 shadow-xl hover:bg-dark-blue duration-300">{button1}</button>
-                            </a>
+                            </a>}
                         </div>
                     </div>
                 </SwiperSlide>
