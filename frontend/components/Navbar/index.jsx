@@ -1,14 +1,15 @@
 import Image from 'next/image';
 import { useState, useEffect } from 'react';
 import { HiMenu, HiX } from 'react-icons/hi';
+import { Dropdown } from './dropdown';
 
 export const Navbar = () => {
     const [mobileMode, setMobileMode] = useState(false);
     useEffect(()=> {
-        setMobileMode(window.innerWidth < 768);
+        setMobileMode(window.innerWidth <= 800);
 
         window.addEventListener('resize', ()=> {
-            setMobileMode(window.innerWidth < 768);
+            setMobileMode(window.innerWidth <= 800);
         });
      }, [])
 
@@ -26,9 +27,8 @@ export const Navbar = () => {
                 <a href="/" className="text-dark-small-text text-xl content ml-12 border-b-4 border-light-dark-blue">Home</a>
                 <a href="/about" className="text-dark-small-text text-xl content ml-6">About</a>
 
-                {/* TODO: Add dropdowns? */}
-                <a href="/programs" className="text-dark-small-text text-xl content ml-6 ">Programs</a>
-                <a href="/application" className="text-dark-small-text text-xl content ml-6 ">Application</a>
+                <Dropdown name="Programs" links={[{name: "Impact", href: "/impact"}, {name: "Builds", href: "/build"}]} />
+                <Dropdown name="Application" links={[{name: "Apply Now", href: "/apply"}, {name: "FAQs", href: "/faq"}]} />
             </nav>
         );
     else if (!open) 
@@ -56,10 +56,10 @@ export const Navbar = () => {
                     <div className="grow"></div>
                 </nav>
                 <nav className="flex bg-white flex-col text-dark-small-text font-bold text-xl m-4 gap-1">
-                    <a href="/" className="border-b-2 pb-2 border-grey">Home</a>
-                    <a href="/about" className="border-b-2 pb-2 border-grey">About</a>
-                    <a href="/programs" className="border-b-2 pb-2 border-grey">Programs</a>
-                    <a href="/application" className="border-b-2 pb-2 border-grey">Application</a>
+                    <a href="/" className="border-b-2 pb-2 border-grey mt-3">Home</a>
+                    <a href="/about" className="border-b-2 pb-2 border-grey mt-3">About</a>
+                    <Dropdown mobile={true} name="Programs" links={[{name: "Impact", href: "/impact"}, {name: "Builds", href: "/build"}]} />
+                    <Dropdown mobile={true} name="Application" links={[{name: "Apply Now", href: "/apply"}, {name: "FAQs", href: "/faq"}]} />
                 </nav>
             </div>
             
