@@ -11,13 +11,14 @@ import { TriColCards } from '../components/Displays/TriColCards'
 import Serve from '../data/whoWeServe.json'
 import { TeamGrid } from '../components/Displays/TeamGrid'
 import Team from '../data/team.json'
+import { Navbar } from '../components/Navbar'
 export default function About() {
     return (
         <>
             <Head>
                 <title>About - RoboReach</title>
             </Head>
-
+            <Navbar />
             <Landing
                 title="About Us"
                 desc="Our Story, Our Mission, Our Vision"

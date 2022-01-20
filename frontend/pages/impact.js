@@ -1,21 +1,14 @@
 import Head from 'next/head'
 import { Landing } from '../components/Landing'
 import { MedSep } from '../components/Separators/MedSep'
-import { SmallSep } from '../components/Separators/SmallSep'
-import { LeftTextWithButton } from '../components/TwoCol/LeftTextWithButton'
-import { RightTextWithButton } from '../components/TwoCol/RightTextWithButton'
-import { SmallSection } from '../components/Landing/SmallSection'
 import { Heading } from '../components/Text/Heading'
 import { Footer } from '../components/Footer'
-import { TriColCards } from '../components/Displays/TriColCards'
-import Serve from '../data/whoWeServe.json'
-import { TeamGrid } from '../components/Displays/TeamGrid'
-import Team from '../data/team.json'
 import ByNumbers from '../data/byNumbers.json'
 import { TriColCounter } from '../components/Displays/TriColCounter'
 import { ChartDualCol } from '../components/Displays/ChartDualCol'
 import { getAllFilesFrontMatter } from '../lib/mdx'
 import { BlogCard } from '../components/Cards/BlogCard'
+import { Navbar } from '../components/Navbar'
 export default function Impact({ posts }) {
 
     return (
@@ -23,7 +16,7 @@ export default function Impact({ posts }) {
             <Head>
                 <title>Impact - RoboReach</title>
             </Head>
-
+            <Navbar />
             <Landing
                 title="Our Impact"
                 desc="Changing the world one student at a time"
