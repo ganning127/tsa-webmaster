@@ -4,7 +4,6 @@ import mdxPrism from 'mdx-prism'
 import path from 'path'
 import readingTime from 'reading-time'
 import renderToString from 'next-mdx-remote/render-to-string'
-
 import MDXComponents from '../components/MDXComponents'
 
 const root = process.cwd()
@@ -31,6 +30,7 @@ export async function getFileBySlug(type, slug) {
         }
     })
 
+
     return {
         mdxSource,
         frontMatter: {
@@ -45,16 +45,19 @@ export async function getFileBySlug(type, slug) {
 export async function getAllFilesFrontMatter(type) {
     const files = fs.readdirSync(path.join(root, 'data', type))
 
-    return files.reduce((allPosts, postSlug) => {
+
+    return files.reduce((allPosts, postSlug, i) => {
         const source = fs.readFileSync(
             path.join(root, 'data', type, postSlug),
             'utf8'
         )
-        const { data } = matter(source)
+        const { data, content } = matter(source)
+        // const views = "100"
 
         return [
             {
                 ...data,
+                readingTime: readingTime(content),
                 slug: postSlug.replace('.mdx', '')
             },
             ...allPosts

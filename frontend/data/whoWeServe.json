@@ -1,17 +1,17 @@
 [
     {
         "title": "All demographics",
-        "pic": "/virtual.png",
+        "pic": "/temp_comp.png",
         "desc": "Under strict rules and limited time and resources, teams of high school students are challenged to build industrial-size robots to play a difficult field game."
     },
     {
         "title": "No Experience Needed",
-        "pic": "/accessible.png",
+        "pic": "/temp_virtual.png",
         "desc": "Under strict rules and limited time and resources, teams of high school students are challenged to build industrial-size robots to play a difficult field game."
     },
     {
         "title": "Anyone, anytime!",
-        "pic": "/free.png",
+        "pic": "/temp_logos.png",
         "desc": "With sponsors from Google, Amazon, Facebook, and Boeing, all of our programs are free to everyone. All you have to do to sign up is apply!"
     }
 ]

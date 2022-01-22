@@ -1,12 +1,16 @@
-export const TeamCard = ({ title, about, name, pic }) => {
+import { Box, Text, WrapItem, Avatar } from "@chakra-ui/react";
+
+export const TeamCard = ({ name, title, about, pic }) => {
     return (
-        <div className="p-4 rounded-md shadow-md bg-slate-50 text-center max-w-md mx-auto hover:scale-105 duration-200">
-            <div className="">
-                <img src={pic} alt={name} className="mx-auto rounded-full max-h-32" />
-                <p className="font-bold mt-2 text-xl">{name}</p>
-                <p className="text-dark-blue italic font-semibold text-lg">{title}</p>
-            </div>
-            <p className="text-xl">{about}</p>
-        </div>
+        <Box bg="#FDFDFD" shadow="md" borderRadius="10px" textAlign="center" p="4">
+            <WrapItem >
+                <Avatar size='2xl' name={name} src={pic} mx="auto" />
+            </WrapItem>
+
+            <Text color="text.dark" fontWeight="bold">{name}</Text>
+            <Text color="blue.light" fontWeight="bold" my="2" fontStyle="italic">{title}</Text>
+            <Text color="text.dark" fontWeight="normal">{about}</Text>
+
+        </Box >
     )
 }

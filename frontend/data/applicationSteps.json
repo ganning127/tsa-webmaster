@@ -1,0 +1,18 @@
+[
+    {
+        "name": "Fill out the basic & academic information",
+        "img": "/basic.png"
+    },
+    {
+        "name": "Write your essays",
+        "img": "/pencils.png"
+    },
+    {
+        "name": "Get a teacher recommendation",
+        "img": "/teacher.png"
+    },
+    {
+        "name": "Submit your application",
+        "img": "/submit.png"
+    }
+]

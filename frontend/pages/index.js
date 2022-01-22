@@ -1,18 +1,20 @@
 import Head from 'next/head'
-import { Landing } from '../components/Landing'
-import { Footer } from '../components/Footer'
+import { NavBar } from '../components/NavBar/index.tsx'
+import { Footer } from '../components/Footer/index.tsx'
+import { SwiperLanding } from '../components/Landing/SwiperLanding'
 import { LeftTextWithButton } from '../components/TwoCol/LeftTextWithButton'
+import { Container } from '@chakra-ui/react'
 import { MedSep } from '../components/Separators/MedSep'
-import { SmallSep } from '../components/Separators/SmallSep'
-import Benefits from '../data/benefits.json'
-import { TriColCards } from '../components/Displays/TriColCards'
-import { Heading } from '../components/Text/Heading'
-import { RightTextWithButtonBuild } from '../components/TwoCol/RightTextWithButtonBuild'
-import { LeftTextWithButtonBuild } from '../components/TwoCol/LeftTextWithButtonBuild'
+import benefits from '../data/benefits.json'
+import { CardDisplay } from '../components/ThreeCol/CardDisplay'
+import { TwoColTextWithPic } from '../components/TwoCol/TwoColTextWithPic'
+import { HeadingWithDesc } from '../components/Headings/HeadingWithDesc'
 import { Testimonials } from '../components/Testimonials'
-import { ImageGrid } from '../components/Displays/ImageGrid'
 import Sponsors from '../data/sponsors.json'
-import { Navbar } from '../components/Navbar'
+import { TwoColPics } from '../components/TwoCol/TwoColPics'
+import { Contact } from '../components/TwoCol/Contact'
+import { MedSepNoLine } from '../components/Separators/MedSepNoLine'
+import Fade from 'react-reveal/Fade';
 export default function Home() {
   return (
     <>
@@ -22,85 +24,99 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <Navbar />
 
-      <Landing
+      <NavBar active="home" />
+      <SwiperLanding
         title="RoboReach"
         desc="Using robotics to build the leaders of tomorrow"
-        button1="Sign Up"
-        link1="/signup"
+        button="Sign Up"
+        buttonLink="/apply"
       />
-      <MedSep />
-      <div className="container mx-auto px-4">
-        <LeftTextWithButton
-          title="The Future of Education"
-          desc="For no cost, underprivileged students around the nation are provided with remote stem opportunities focused in robotics. In these programs, students not only gain a foundation in key STEM principles but also advanced skills that give them an academic and professional edge.  Under strict rules and limited time and resources, teams of high school students are challenged to build industrial-size."
-          buttonText="Learn More"
-          buttonLink="/about"
-          pic="/first.png"
-        />
+      <Container maxW="container.xl">
+        <MedSepNoLine />
 
-        <MedSep />
+        <Fade>
+          <LeftTextWithButton
+            title="The Future of Education"
+            desc="RoboReach is a non-profit organization that uses robotics to build the leaders of tomorrow. We are building a community of young people who are passionate about building a better future for themselves and their communities."
+            button="Learn More"
+            buttonLink="/about"
+            image='/temp_first.png'
+            color="green.dark"
+            hoverColor="green.dark.hover"
+          />
 
-        <Heading desc="All of our programs are free and virtual!">Benefits</Heading>
-        <TriColCards
-          data={Benefits}
-        />
 
-        <MedSep />
-        <Heading desc="Join us as we build robots!">Robot Builds</Heading>
-        <RightTextWithButtonBuild
-          title="Common Build"
-          desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. "
-          buttonText="Learn More"
-          buttonLink="/TODO"
-          keyword="Ages:"
-          answer="K-3"
-          pic="/common.png"
-          color="dark-green"
-          colorHover="darker-green"
-        />
-        <SmallSep />
-        <LeftTextWithButtonBuild
-          title="Challenge Build"
-          desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. "
-          buttonText="Learn More"
-          buttonLink="/TODO"
-          keyword="Ages:"
-          answer="4-7"
-          pic="/challenge.png"
-          color="light-blue"
-          colorHover="dark-blue"
-        />
-        <SmallSep />
+          <MedSep />
 
-        <RightTextWithButtonBuild
-          title="Creative Build"
-          desc="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley. "
-          buttonText="Learn More"
-          buttonLink="/TODO"
-          keyword="Ages:"
-          answer="8-12"
-          pic="/creative.png"
-          color="dark-blue"
-          colorHover="darker-blue"
-        />
+          <HeadingWithDesc desc="All of our programs are free and virtual!">Benefits</HeadingWithDesc>
+          <CardDisplay
+            data={benefits}
+          />
 
-        <MedSep />
-        <Heading desc="Hear what our students have to say!">Testimonials</Heading>
-        <Testimonials />
-        <MedSep />
+          <MedSep />
 
-        <Heading desc="Check out the organizations that help us!">Sponsors</Heading>
+          <TwoColTextWithPic
+            pic='/common_build.png'
+            title="Common Build"
+            desc="Students are led step-by-step through the process of building a basic LEGO® MINDSTORMS® robot  to introduce fundamental principles and concepts. Instructors will guide groups of students through live-sessions in order to ensure full participation and mastery of the concepts."
+            align="left"
+            keyword="Grades"
+            value="K-3"
+            buttonText="Read More"
+            buttonLink="/builds"
+            color="green.dark"
+            hoverColor="green.dark.hover"
+          />
 
-        <ImageGrid
-          data={Sponsors}
-        />
-        <MedSep />
-        <MedSep />
-        <Footer />
+          <MedSepNoLine />
+          <TwoColTextWithPic
+            pic='/challenge_build.png'
+            title="Challenge Build"
+            desc="Students are given tasks that the robot should be able to complete, designing and building the robot from a variety of available parts. Instructors will guide students through each step of the process through live chat and video. "
+            align="right"
+            buttonText="Read More"
+            buttonLink="/builds"
+            keyword="Grades"
+            value="4-7"
+            color="blue.light"
+            hoverColor="blue.dark"
+          />
 
-      </div>
+          <MedSepNoLine />
+
+          <TwoColTextWithPic
+            pic='/creative_build.png'
+            title="Creative Build"
+            desc="Each student will design and create a unique build that addresses a problem they decide on. Students will be matched with a mentor who will guide them through the entire process, helping them decide on materials, a design, and the building process"
+            align="left"
+            keyword="Grades"
+            value="8-12"
+            buttonText="Read More"
+            buttonLink="/builds"
+            color="blue.dark"
+            hoverColor="blue.dark.hover"
+          />
+          <MedSep />
+
+          <HeadingWithDesc
+            desc="Hear what our students have to say."
+          >Testimonials</HeadingWithDesc>
+          <Testimonials />
+
+          <MedSep />
+          <HeadingWithDesc>Sponsors</HeadingWithDesc>
+          <TwoColPics
+            data={Sponsors}
+          />
+
+          <MedSep />
+          <Contact />
+
+          <MedSepNoLine />
+          <Footer />
+        </Fade>
+      </Container>
 
 
     </>

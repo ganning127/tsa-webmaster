@@ -1,16 +1,43 @@
-import { Button } from "../Button"
+import {
+    Heading,
+    Text,
+    Button,
+    Box,
+    Img,
+    SimpleGrid
+} from '@chakra-ui/react';
 
-export const LeftTextWithButton = ({ title, desc, buttonText, buttonLink, pic, picRadius }) => {
+export const LeftTextWithButton = ({ title, desc, button, buttonLink, radius, image }) => {
     return (
-        <div className="grid sm:grid-cols-1 md:grid-cols-2">
-            <div className="max-w-xl m-auto text-center md:text-left">
-                <h2 className="text-5xl font-bold text-dark-blue">{title}</h2>
-                <p className="text-2xl text-dark my-2">{desc}</p>
-                <Button className="bg-light-blue text-white hover:bg-dark-blue shadow-lg" href={buttonLink}>{buttonText}</Button>
-            </div>
-            <div className="mt-4 md:mt-0">
-                <img src={pic} alt="pic" className={`max-h-96 mx-auto rounded-${picRadius}`} />
-            </div>
-        </div>
+        <>
+            <SimpleGrid columns={{ base: 1, md: 2 }} spacing={20} alignItems="center">
+                <Box>
+                    <Heading as="h1" fontSize="3xl" fontWeight="bold" color="blue.dark">
+                        {title}
+                    </Heading>
+                    <Text as="p" fontSize="2xl" my="6">
+                        {desc}
+                    </Text>
+                    <Button
+                        as="a"
+                        href={buttonLink}
+                        bg="blue.light"
+                        color="white"
+                        fontSize="xl"
+                        fontWeight="bold"
+                        _hover={{ bg: 'blue.dark' }}
+                        shadow="lg"
+                        px="5"
+                        py="6"
+                    >
+                        {button}
+                    </Button>
+                </Box>
+                <Box>
+                    <Img src={image} mx="auto" borderRadius={radius} />
+                </Box>
+            </SimpleGrid>
+
+        </>
     )
 }

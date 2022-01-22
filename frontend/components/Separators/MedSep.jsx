@@ -1,5 +1,6 @@
+import { Divider } from '@chakra-ui/react';
 export const MedSep = () => {
     return (
-        <div className='h-1 my-10' />
+        <Divider my="20" />
     )
 }

@@ -1,7 +1,28 @@
 import Head from 'next/head'
-import { Navbar } from '../components/Navbar'
-import { LoginTwoCol } from '../components/TwoCol/LoginTwoCol'
-export default function Login() {
+import { NavBar } from '../components/NavBar/index.tsx'
+import { Footer } from '../components/Footer/index.tsx'
+import { LeftTextWithButton } from '../components/TwoCol/LeftTextWithButton'
+import { Container, Box, Heading, VStack, Text, Button, SimpleGrid, Img, Input, FormControl, Link } from '@chakra-ui/react'
+import { Spinner } from '@chakra-ui/react'
+import { Formik, Form } from 'formik';
+export default function Home() {
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        document.getElementById('spinner').style.display = 'block';
+        const email = document.getElementById('email').value;
+        const password = document.getElementById('password').value;
+
+        setTimeout(() => {
+            let valid = Math.random() > 0.5 ? true : false;
+            if (valid) {
+                window.location.href = '/';
+            } else {
+                document.getElementById('wrong-msg').style.display = 'block';
+                document.getElementById('spinner').style.display = 'none';
+            }
+        }, 2000);
+
+    }
     return (
         <>
             <Head>
@@ -10,9 +31,70 @@ export default function Login() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <Navbar />
 
-            <LoginTwoCol />
+
+
+            <Box bg='url("/login_bkg.png")' h="100vh" bgRepeat="no-repeat" bgSize="cover" bgPos="center">
+                <Container maxW="container.xl" mt="8">
+                    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} alignItems="center" h="100vh" justifyContent="center">
+                        <Box d={{ base: 'none', md: 'block' }}>
+                            <Img src='/logo_no_small.png' />
+                        </Box>
+                        <Box>
+
+                            <Formik
+                                initialValues={{ name: 'Sasuke' }}
+                                onSubmit={(values, actions) => {
+                                    setTimeout(() => {
+                                        alert(JSON.stringify(values, null, 2))
+                                        actions.setSubmitting(false)
+                                    }, 1000)
+                                }}
+                            >
+                                <Form onSubmit={handleSubmit} >
+                                    <VStack
+                                        spacing={4}
+                                        align='stretch'
+                                        maxW="400px"
+                                        mx="auto"
+                                    >
+                                        <Box>
+                                            <Text fontSize='md' mb="0">Welcome back</Text>
+                                            <Text fontWeight="bold" fontSize='3xl' mb="3" color='blue.dark'>Student Login</Text>
+
+                                            <Text bg="red.100" p={2} rounded="lg" style={{ display: 'none' }} id='wrong-msg'>Wrong username or password</Text>
+                                        </Box>
+
+
+                                        <FormControl isRequired borderRadius="20" color="gray.900">
+                                            <Input id='email' type="email" placeholder='Email' color="gray.900" />
+                                        </FormControl>
+                                        <FormControl isRequired borderRadius="20" color="gray.900">
+                                            <Input id='password' type="password" placeholder='password' color="gray.900" />
+                                        </FormControl>
+
+
+                                        <Button color="white" bg="blue.light" _hover={{ bg: "blue.dark" }} type="submit" id='submit'>
+
+                                            <Spinner style={{ display: 'none' }} id='spinner' />
+                                            <Text ml="2">Login</Text>
+
+                                        </Button>
+
+                                        <Text>Don&apos;t have an account? <Link href='/signup' bg='gray.100' p={1} rounded='lg'>Sign up here!</Link></Text>
+                                    </VStack>
+                                </Form>
+                            </Formik>
+
+                        </Box>
+
+                    </SimpleGrid>
+                </Container>
+            </Box>
+
+
+
+
 
         </>
     )
