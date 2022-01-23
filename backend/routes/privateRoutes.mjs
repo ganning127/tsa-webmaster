@@ -6,7 +6,7 @@ export default async function(fastify) {
     }, async function(request, reply) {
         try {
             const application = await getApplication(request.user)
-            reply.send(application)
+            reply.send({ application })
         } catch (err) {
             reply.code(500).send({ error: "Internal server error" })
         }
