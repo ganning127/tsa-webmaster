@@ -8,7 +8,8 @@ import { useNavMenu } from './useNavMenu.ts'
 import { Link } from './_data.tsx'
 
 interface SubmenuProps {
-  link: Link
+  link: Link,
+  active: string,
 }
 
 const DesktopSubmenu = (props: SubmenuProps) => {
@@ -25,7 +26,7 @@ const DesktopSubmenu = (props: SubmenuProps) => {
         fontWeight="semibold"
         {...getTriggerProps()}
       >
-        <Box>{link.label}</Box>
+        <Box color={link.label.toLowerCase() === props.active ? "green.dark" : "text.dark"} _hover={{ color: 'gray.400' }} transition="all 0.2s">{link.label}</Box>
         <Box marginStart="2" as={FaChevronDown} fontSize="xs" />
       </NavLink.Desktop>
 

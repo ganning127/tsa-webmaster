@@ -22,7 +22,7 @@ export default function Apply() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <NavBar />
+            <NavBar active="application" />
 
 
             <Container maxW="container.xl" mt="8">

@@ -34,7 +34,7 @@ export default function Impact({ posts }) {
             </Head>
 
 
-            <NavBar active="about" />
+            <NavBar active="programs" />
 
             <Container maxW="container.xl" mt="8">
                 <Fade>
