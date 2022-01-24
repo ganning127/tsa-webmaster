@@ -1,28 +1,20 @@
-const applications = []
+export async function getApplication(collection, user) {
+    const application = await collection.findOne(user)
 
-export async function getApplication(user) {
-    const application = applications.find(application => application.username === user.username)
     if (!application) {
-        applications.push({
-            username: user.username,
-        })
+        await collection.insertOne(user)
     }
 
-    return applications.find(application => application.username === user.username)
+    return await collection.findOne(user)
 }
 
-export async function saveApplication(user, application) {
-    const index = applications.findIndex(application => application.username === user.username)
-    if (index === -1) {
-        applications.push({
-            username: user.username,
-        })
+export async function saveApplication(collection, user, application) {
+    const applicationObj = await collection.findOne(user)
+    if (!applicationObj) {
+        await collection.insertOne({ username: user.username })
     }
 
-    applications[index] = {
-        ...application,
-        username: user.username,
-    }
+    await collection.replaceOne(user, { ...application, username: user.username })
 
-    return applications[index]
+    return await collection.findOne(user)
 } 

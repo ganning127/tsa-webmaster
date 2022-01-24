@@ -1,17 +1,10 @@
 import bcrypt from 'bcryptjs'
-import fastify from 'fastify';
-import { request } from 'http';
 import jsonwebtoken from "jsonwebtoken";
 
 const salt = bcrypt.genSaltSync(10)
 
-const users = [{
-    username: "john@doe.com",
-    password: bcrypt.hashSync("password", salt),
-}]
-
-export async function userLogin(username, password) {
-    const user = users.find(user => user.username === username)
+export async function userLogin(collection, username, password) {
+    const user = await collection.findOne({ username })
     if (!user) {
         throw new Error('User not found')
     }
@@ -25,17 +18,14 @@ export async function userLogin(username, password) {
     return token
 }
 
-export async function userSignUp(username, password) {
-    const user = users.find(user => user.username === username)
+export async function userSignUp(collection, username, password) {
+    const user = await collection.findOne({ username })
     if (user) {
         throw new Error('User already exists')
     }
 
     const hash = await bcrypt.hash(password, salt)
-    users.push({
-        username,
-        password: hash
-    })
+    await collection.insertOne({ username, password: hash })
 
     return { username }
 }
