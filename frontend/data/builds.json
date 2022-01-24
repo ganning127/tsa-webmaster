@@ -1,0 +1,77 @@
+[
+    {
+        "tabTitle": "Common Build",
+        "tabId": "common",
+        "pic": "/common_build.png",
+        "color": "green.dark",
+        "pic_alt": "Common Build",
+        "head1": "Description",
+        "desc1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "desc1_2": "The leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "head2": "Logistics",
+        "desc2": "All classes will be taught remotely via RoboReach’s native livestream feature. If accepted, you’ll receive an email and be prompted to make an account.",
+        "summerSession": "Daily: 9 - 11:30AM and 12 - 5PM",
+        "schoolSession": "Mondays, Wednesdays, Fridays: 5 - 9PM",
+        "head3": "Week Breakdown",
+        "weeks": [
+            {
+                "title": "Week 1",
+                "desc": "We’ll ship you all the materials you need for the first week’s lesson. This week will focus on knowing what you have and how to use each part!",
+                "pic": "/boxes.png"
+            },
+            {
+                "title": "Weeks 2-4",
+                "desc": "Build your robot! We’ll walk through the instructions with you on not only how to build your robot but also in best practices!",
+                "pic": "/tools.png"
+            },
+            {
+                "title": "Week 5-8",
+                "desc": "Program your robot! We’ll walk through how to write code to move the robot the way you’d like.",
+                "pic": "/code.png"
+            }
+        ],
+        "head4": "Requirements",
+        "desc4": "You don’t have previous experience in this field? Don’t worry! We’ve got your back, you could still apply for this positions! You are required to have strong communication skills to communicate effectively with students.",
+        "button1": "Refer a Friend",
+        "link1": "https://www.google.com",
+        "button2": "Apply Now",
+        "link2": "/apply"
+    },
+    {
+        "tabTitle": "Common Build",
+        "tabId": "common",
+        "pic": "/common_build.png",
+        "pic_alt": "Common Build",
+        "head1": "Description",
+        "desc1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
+        "desc1_2": "The leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "head2": "Logistics",
+        "desc2": "All classes will be taught remotely via RoboReach’s native livestream feature. If accepted, you’ll receive an email and be prompted to make an account.",
+        "summerSession": "Daily: 9 - 11:30AM and 12 - 5PM",
+        "schoolSession": "Mondays, Wednesdays, Fridays: 5 - 9PM",
+        "head3": "Week Breakdown",
+        "weeks": [
+            {
+                "title": "Week 1",
+                "desc": "We’ll ship you all the materials you need for the first week’s lesson. This week will focus on knowing what you have and how to use each part!",
+                "pic": "/boxes.png"
+            },
+            {
+                "title": "Weeks 2-4",
+                "desc": "Build your robot! We’ll walk through the instructions with you on not only how to build your robot but also in best practices!",
+                "pic": "/tools.png"
+            },
+            {
+                "title": "Week 5-8",
+                "desc": "Program your robot! We’ll walk through how to write code to move the robot the way you’d like.",
+                "pic": "/code.png"
+            }
+        ],
+        "head4": "Requirements",
+        "desc4": "You don’t have previous experience in this field? Don’t worry! We’ve got your back, you could still apply for this positions! You are required to have strong communication skills to communicate effectively with students. Excited? We are waiting for your application. All the best for your application from TCF :)",
+        "button1": "Refer a Friend",
+        "link1": "https://www.google.com",
+        "button2": "Apply Now",
+        "link2": "/apply"
+    }
+]
