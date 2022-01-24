@@ -1,6 +1,6 @@
 # API Spec
 ## Running the API
-To run the the API in a local development environment, go into the directory, do `npm i`  and run `npm start` and the API URL will be logged to the console. Also, the API log will be printed to the console.
+To run the the API in a local development environment, go into the directory, create a .env file with the fields JWT_SECRET and MONGODB_URL set to valid values, and do `npm i` and run `npm start` and the API URL will be logged to the console. Also, the API log will be printed to the console.
 ## Public Routes
 ### Login User
 - `POST /api/user/login`
@@ -12,7 +12,7 @@ Use the following JSON object request format for the request body.
   "password": "password"	
 }
 ```
- Returns with code 200 and a JSON object with the following format if successful.
+ Returns with code 201 and a JSON object with the following format if successful.
 ```json
 {
     "token": "........"
@@ -34,6 +34,7 @@ Responds with code 200 and a JSON object with the following format if successful
 ```json
 {
     "application": {
+        "_id": "...",
         "username": "johndoe@example.com",
         ... 
     }
@@ -43,17 +44,18 @@ Note that the format of the application JSON object is up to the API consumer, e
 
 ### Save application
  - `POST /api/application`
- Saves the request specified application JSON object.
+Saves the request specified application JSON object.
 Use the following JSON object request format for the request body.
 ```json
 {
 	"application": {}
 }
 ```
-Returns with code 200 and a JSON object with the following format if successful.
+Returns with code 201 and a JSON object with the following format if successful.
 ```json
 {
     "application": {
+        "_id": "...",
         "username": "johndoe@example.com",
         ... 
     }

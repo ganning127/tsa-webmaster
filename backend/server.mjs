@@ -2,6 +2,7 @@ import "dotenv/config"
 import fastifyAuth from "fastify-auth"
 import publicRoutes from "./routes/publilcRoutes.mjs"
 import privateRoutes from "./routes/privateRoutes.mjs"
+import fastifyMongoDB from "fastify-mongodb"
 
 import Fastify from "fastify"
 import { verifyToken } from "./middleware/auth.mjs"
@@ -9,6 +10,10 @@ const fastify = Fastify({
     logger: true
 })
 
+fastify.register(fastifyMongoDB, {
+    forceClose: true,
+    url: process.env.MONGODB_URL,
+})
 fastify.decorate("verifyToken", verifyToken)
 fastify.register(fastifyAuth)
     .after(() => privateRoutes(fastify))
