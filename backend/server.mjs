@@ -14,14 +14,14 @@ fastify.register(fastifyMongoDB, {
     forceClose: true,
     url: process.env.MONGODB_URL,
 })
-fastify.decorate("verifyToken", verifyToken)
-fastify.register(fastifyAuth)
-    .after(() => privateRoutes(fastify))
-fastify.register(publicRoutes)
+    .register(fastifyAuth)
+    .decorate("verifyToken", verifyToken)
+    .register(privateRoutes)
+    .register(publicRoutes)
 
 async function start() {
     try {
-        const address = await fastify.listen(3000)
+        const address = await fastify.listen(process.env.PORT, '0.0.0.0')
         console.log(`server listening on ${address}`)
     } catch (err) {
         fastify.log.error(err)
