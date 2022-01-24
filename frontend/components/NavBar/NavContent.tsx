@@ -70,7 +70,6 @@ const DesktopNavContent = (props: any) => {
         <Button bg="green.dark" _hover={{ bg: "green.dark.hover" }} color="white" as="a" href="/login" borderRadius="20" shadow="lg">
           Sign In
         </Button>
-
       </HStack>
     </Flex>
   )
