@@ -1,10 +1,9 @@
 import * as React from 'react'
-import { IoCalendar, IoGrid, IoHelpBuoy } from 'react-icons/io5'
-import { MdComputer } from 'react-icons/md'
 import { AiOutlineTeam } from "react-icons/ai";
 import { IoFootstepsSharp } from "react-icons/io5";
 import { FaHammer, FaRobot } from "react-icons/fa";
-import { BsQuestion } from "react-icons/bs";
+import { BsQuestion, BsFillInfoCircleFill } from "react-icons/bs";
+import { BiCodeAlt } from 'react-icons/bi'
 
 export interface Link {
   label: string
@@ -19,7 +18,23 @@ export interface Link {
 
 export const links: Link[] = [
   { label: 'Home', href: '/' },
-  { label: 'About', href: '/about' }, // TODO: add a page about this website
+  {
+    label: 'About',
+    children: [
+      {
+        label: 'About RoboReach',
+        description: 'Learn about our mission, our vision, and our team.',
+        href: '/about',
+        icon: <BsFillInfoCircleFill />
+      },
+      {
+        label: "About RoboReach's Website",
+        description: "How we coded this website and it's functionality!",
+        href: '/about-roboreach-website',
+        icon: <BiCodeAlt />
+      }
+    ]
+  },
   {
     label: 'Programs',
     children: [

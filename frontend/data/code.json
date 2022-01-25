@@ -1,0 +1,19 @@
+{
+    "languages": [
+        {
+            "name": "React.js",
+            "desc": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.",
+            "url": "https://reactjs.org/"
+        },
+        {
+            "name": "Next.js",
+            "desc": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.",
+            "url": "https://nextjs.org/"
+        },
+        {
+            "name": "Chakra UI",
+            "desc": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.",
+            "url": "https://chakra-ui.com/"
+        }
+    ]
+}
