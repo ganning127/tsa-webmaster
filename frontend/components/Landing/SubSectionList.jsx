@@ -14,8 +14,6 @@ export const SubSectionList = ({ title, steps }) => {
             >
                 {title}
             </Heading>
-            <Text fontSize="xl" my="2">If you are under 7th grade, have a parent send an email to <Link href="mailto:apply@roboreach.org" color="blue.light">roboreach@roboreach.org</Link> to apply!</Text>
-
 
             <SimpleGrid columns={{ base: 1, md: 2, lg: 4 }} spacing={10} mt="4">
                 {steps.map((step, index) => (

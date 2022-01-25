@@ -37,6 +37,28 @@ export default function Apply() {
                     />
 
                     <MedSep />
+                    <SimpleGrid columns={{ base: 1, md: 2 }} spacing={{ base: 10, md: 30, lg: 80 }}>
+                        <Box>
+                            <Heading as="h2" size="lg" mb="4" color='green.dark'>
+                                If you are in 7th grade or under...
+                            </Heading>
+                            <Text fontSize='xl'>
+                                Great news! You don't need to fill out this application! Have a parent or guardian send an email to <Link href='mailto:teamroboreach@gmail.com'>roboreach@gmail.com</Link> to apply!
+                            </Text>
+
+                        </Box>
+                        <Box>
+                            <Heading as="h2" size="lg" mb="4" color='blue.dark'>
+                                If you are in 8th grade or over...
+                            </Heading>
+
+                            <Text fontSize='xl'>
+                                Please read the application instructions below, and fill out the application form to apply to RoboReach!
+                            </Text>
+                        </Box>
+                    </SimpleGrid>
+
+                    <MedSep />
 
                     <SubSectionList
                         title="Application Process"

@@ -5,6 +5,7 @@ import theme from '../styles/theme'
 import { ChakraProvider } from '@chakra-ui/react'
 import { useColorMode } from '@chakra-ui/react'
 import { Global, css } from '@emotion/react'
+import { SessionProvider } from "next-auth/react"
 
 function ForceLightMode({ children }) {
   // force light mode b/c of ChakraUI bug
@@ -41,13 +42,15 @@ const GlobalStyle = ({ children }) => {
   )
 }
 
-export default function App({ Component, pageProps }) {
+export default function App({ Component, pageProps: { session, ...pageProps } }) {
   // 2. Use at the root of your app
   return (
     <ChakraProvider theme={theme}>
       <GlobalStyle>
         <ForceLightMode>
-          <Component {...pageProps} />
+          <SessionProvider session={session}>
+            <Component {...pageProps} />
+          </SessionProvider>
         </ForceLightMode>
       </GlobalStyle>
     </ChakraProvider>

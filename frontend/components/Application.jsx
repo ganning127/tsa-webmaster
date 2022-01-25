@@ -11,6 +11,7 @@ import {
     Textarea,
     Button,
     Box,
+    Select,
     NumberInput,
     NumberInputField,
     NumberInputStepper,
@@ -29,8 +30,6 @@ export const Application = ({ }) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-
-
     };
 
     return (
@@ -80,12 +79,20 @@ export const Application = ({ }) => {
                                             </NumberInput>
                                         </FormControl>
 
-                                        <FormControl isRequired borderRadius="20" color="gray.900">
+                                        <FormControl isRequired borderRadius="20" color="gray.900" >
                                             <FormLabel htmlFor='email' color="blue.dark">Last Name</FormLabel>
                                             <Input id='email' type="text" placeholder='e.g. example@gmail.com' color="gray.900" />
                                         </FormControl>
 
                                     </SimpleGrid>
+
+                                    <FormControl isRequired borderRadius="20" color="gray.900" mt={5} maxW='800px' mx='auto'>
+                                        <FormLabel htmlFor='school' color="blue.dark">Program you're applying to</FormLabel>
+                                        <Select placeholder="Select program" id='prog'>
+                                            <option value="academicYearProg">Academic Year (Aug - Jun)</option>
+                                            <option value="summerProg">Summer (Jun - Aug)</option>
+                                        </Select>
+                                    </FormControl>
                                 </Box>
                             </Fade>
 
@@ -160,7 +167,7 @@ export const Application = ({ }) => {
                             <Fade>
                                 <Box textAlign="center">
                                     <MedHeading>Teacher Recommendations</MedHeading>
-                                    <Text fontSize="xl">Please have your teacher email one (1) recommendation letter on your behalf to <Link href="mailto:apply@roboreach.org" color="blue.light">roboreach@roboreach.org</Link></Text>
+                                    <Text fontSize="xl">Please have your teacher email one (1) recommendation letter on your behalf to <Link href="mailto:teamroboreach@gmail.com" color="blue.light">rteamroboreach@gmail.com</Link></Text>
                                 </Box>
                             </Fade>
 
