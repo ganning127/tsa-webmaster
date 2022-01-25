@@ -12,12 +12,30 @@ Use the following JSON object request format for the request body.
   "password": "password"	
 }
 ```
- Returns with code 201 and a JSON object with the following format if successful.
+ Returns with code 200 and a JSON object with the following format if successful.
 ```json
 {
     "token": "........"
 }
 ```
+
+### Sign up User
+- `POST /api/user`
+Creates a new account and returns a login token if the `username` and `password` fields are valid.
+Use the following JSON object request format for the request body.
+```json
+{
+  "username": "john@doe.com",
+  "password": "password"	
+}
+```
+Returns with code 201 and a JSON object with the following format if successful.
+```json
+{
+    "token": "........"
+}
+```
+Returns with code 409 and an error message if a user with the specified username already exists.
 
 ## Authorization 
 To authenticate a request for a private route, provide a valid login token in the `Authorization` header with the following format
