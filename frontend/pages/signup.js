@@ -7,21 +7,43 @@ import { countryList } from '../data/countries'
 import { Spinner } from '@chakra-ui/react'
 import { Formik, Form } from 'formik';
 export default function Home() {
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         document.getElementById('spinner').style.display = 'block';
+        const firstname = document.getElementById('firstname').value;
+        const lastname = document.getElementById('lastname').value;
+        const gender = document.getElementById('gender').value;
+        const country = document.getElementById('country').value;
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
-        setTimeout(() => {
-            let valid = Math.random() > 0.5 ? true : false;
-            if (valid) {
-                window.location.href = '/';
-            } else {
-                document.getElementById('wrong-msg').style.display = 'block';
-                document.getElementById('spinner').style.display = 'none';
-            }
-        }, 2000);
+        const options = {
+            method: 'POST',
+            body: JSON.stringify({
+                firstname,
+                lastname,
+                gender,
+                country,
+                email,
+                password
+            })
+        }
+
+        const resp = await fetch('/api/signup', options);
+        const data = await resp.json();
+        console.log(data);
+
+
+
+        // setTimeout(() => {
+        //     let valid = Math.random() > 0.5 ? true : false;
+        //     if (valid) {
+        //         window.location.href = '/';
+        //     } else {
+        //         document.getElementById('wrong-msg').style.display = 'block';
+        //         document.getElementById('spinner').style.display = 'none';
+        //     }
+        // }, 2000);
 
     }
     return (
@@ -83,10 +105,10 @@ export default function Home() {
 
                                             <FormControl isRequired borderRadius="20" color="gray.900">
                                                 <Select id='gender' placeholder='Gender' color="gray.900">
-                                                    <option>Male</option>
-                                                    <option>Female</option>
-                                                    <option>Nonbinary</option>
-                                                    <option>Prefer not to say</option>
+                                                    <option value='male'>Male</option>
+                                                    <option value='female'>Female</option>
+                                                    <option value='nonbinary'>Nonbinary</option>
+                                                    <option value='notsay'>Prefer not to say</option>
                                                 </Select>
                                             </FormControl>
                                         </SimpleGrid>

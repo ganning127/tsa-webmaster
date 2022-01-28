@@ -7,5 +7,6 @@ module.exports = {
   env: {
     CONTACT_EMAIL: process.env.CONTACT_EMAIL,
     CONTACT_EMAIL_PASS: process.env.CONTACT_EMAIL_PASS,
+    BACKEND_URL: process.env.BACKEND_URL,
   }
 }

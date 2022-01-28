@@ -6,21 +6,30 @@ import { Container, Box, Heading, VStack, Text, Button, SimpleGrid, Img, Input, 
 import { Spinner } from '@chakra-ui/react'
 import { Formik, Form } from 'formik';
 export default function Home() {
-    const handleSubmit = (event) => {
+    const handleSubmit = async (event) => {
         event.preventDefault();
         document.getElementById('spinner').style.display = 'block';
         const email = document.getElementById('email').value;
         const password = document.getElementById('password').value;
 
-        setTimeout(() => {
-            let valid = Math.random() > 0.5 ? true : false;
-            if (valid) {
-                window.location.href = '/';
-            } else {
-                document.getElementById('wrong-msg').style.display = 'block';
-                document.getElementById('spinner').style.display = 'none';
-            }
-        }, 2000);
+        const options = {
+            method: 'POST',
+            body: JSON.stringify({
+                email,
+                password
+            })
+        }
+
+        const resp = await fetch('/api/login', options);
+        const data = await resp.json();
+        console.log(data);
+        // let valid = Math.random() > 0.5 ? true : false;
+        // if (valid) {
+        //     window.location.href = '/';
+        // } else {
+        //     document.getElementById('wrong-msg').style.display = 'block';
+        //     document.getElementById('spinner').style.display = 'none';
+        // }
 
     }
     return (
