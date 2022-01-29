@@ -7,10 +7,13 @@ export default async function handler(req, res) {
 
     const options = {
         method: 'POST',
-        body: {
-            email: request.email,
-            password: request.password
-        }
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            "username": request.email,
+            "password": request.password
+        })
     }
 
     console.log(process.env.BACKEND_URL + '/user/login')
@@ -18,5 +21,5 @@ export default async function handler(req, res) {
     const resp = await fetch(process.env.BACKEND_URL + '/user/login', options)
     const data = await resp.json();
     console.log(data);
-    res.status(200).json({ name: 'John Doe' })
+    res.status(200).json(data)
 }

@@ -23,6 +23,18 @@ export default function Home() {
         const resp = await fetch('/api/login', options);
         const data = await resp.json();
         console.log(data);
+
+        if (data.error) {
+            document.getElementById('spinner').style.display = 'none';
+            document.getElementById('error').style.display = 'block';
+            document.getElementById('error').innerHTML = data.error;
+        }
+        else {
+            document.getElementById('spinner').style.display = 'none';
+            localStorage.setItem('token', data.token);
+            window.location.href = '/';
+
+        }
         // let valid = Math.random() > 0.5 ? true : false;
         // if (valid) {
         //     window.location.href = '/';
@@ -71,7 +83,7 @@ export default function Home() {
                                             <Text fontSize='md' mb="0">Welcome back</Text>
                                             <Text fontWeight="bold" fontSize='3xl' mb="3" color='blue.dark'>Student Login</Text>
 
-                                            <Text bg="red.100" p={2} rounded="lg" style={{ display: 'none' }} id='wrong-msg'>Wrong username or password</Text>
+                                            <Text bg="red.100" p={2} rounded="lg" style={{ display: 'none' }} id='error'>Wrong username or password</Text>
                                         </Box>
 
 
@@ -100,11 +112,6 @@ export default function Home() {
                     </SimpleGrid>
                 </Container>
             </Box>
-
-
-
-
-
         </>
     )
 }

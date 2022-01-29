@@ -6,7 +6,7 @@ import { Container, Box, Select, VStack, Text, Button, SimpleGrid, Img, Input, F
 import { countryList } from '../data/countries'
 import { Spinner } from '@chakra-ui/react'
 import { Formik, Form } from 'formik';
-export default function Home() {
+export default function SignUp() {
     const handleSubmit = async (event) => {
         event.preventDefault();
         document.getElementById('spinner').style.display = 'block';
@@ -33,17 +33,17 @@ export default function Home() {
         const data = await resp.json();
         console.log(data);
 
+        if (data.error) {
+            document.getElementById('spinner').style.display = 'none';
+            document.getElementById('error').style.display = 'block';
+            document.getElementById('error').innerHTML = data.error;
+        }
+        else {
+            document.getElementById('spinner').style.display = 'none';
+            localStorage.setItem('token', data.token);
+            window.location.href = '/';
 
-
-        // setTimeout(() => {
-        //     let valid = Math.random() > 0.5 ? true : false;
-        //     if (valid) {
-        //         window.location.href = '/';
-        //     } else {
-        //         document.getElementById('wrong-msg').style.display = 'block';
-        //         document.getElementById('spinner').style.display = 'none';
-        //     }
-        // }, 2000);
+        }
 
     }
     return (
@@ -58,7 +58,7 @@ export default function Home() {
 
 
             <Box bg='url("/login_bkg.png")' h="100vh" bgRepeat="no-repeat" bgSize="cover" bgPos="center">
-                <Container maxW="container.xl" mt="8">
+                <Container maxW="container.xl" mt="">
                     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={8} alignItems="center" h="100vh" justifyContent="center">
                         <Box d={{ base: 'none', md: 'block' }}>
                             <Img src='/logo_no_small.png' />
@@ -83,8 +83,10 @@ export default function Home() {
                                     >
                                         <Box>
                                             <Text fontSize='md' mb="0">Welcome back</Text>
-                                            <Text fontWeight="bold" fontSize='3xl' mb="3" color='blue.dark'>Student Sign Up</Text>
+                                            <Text fontWeight="bold" fontSize='3xl' color='blue.dark'>Student Sign Up</Text>
                                         </Box>
+
+                                        <Text id='error' bg='red.100' p={1} rounded='md' style={{ display: 'none' }}>Something went wrong, please try again!</Text>
 
 
                                         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={4}>

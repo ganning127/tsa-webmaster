@@ -2,6 +2,7 @@ import {
   Box,
   Button,
   Flex,
+  Text,
   FlexProps,
   HStack,
   useColorModeValue as mode,
@@ -15,8 +16,20 @@ import { NavMenu } from './NavMenu.tsx'
 import { Submenu } from './Submenu.tsx'
 import { ToggleButton } from './ToggleButton.tsx'
 import { links } from './_data.tsx'
+import { useEffect, useState } from 'react'
 
 const MobileNavContext = (props: FlexProps) => {
+  const [email, setEmail] = useState('')
+  useEffect(() => {
+    let tokens = localStorage.getItem('token')
+    if (tokens) {
+      tokens = tokens.split('.')
+      setEmail(JSON.parse(atob(tokens[1])).username)
+    }
+    // console.log();
+
+  }, []);
+
   const { isOpen, onToggle } = useDisclosure()
   return (
     <>
@@ -28,9 +41,15 @@ const MobileNavContext = (props: FlexProps) => {
           <Img src="/logo.png" alt="Keep" maxW="150px" />
         </Box>
         <Box>
-          <Button bg="green.dark" color="white" as="a" href="#" borderRadius="20">
-            Sign In
-          </Button>
+          {!email && (
+            <Button bg="green.dark" _hover={{ bg: "green.dark.hover" }} color="white" as="a" href="/login" borderRadius="20" shadow="lg">
+              Sign In
+            </Button>)}
+          {
+            email && (
+              <Text fontWeight='bold'>{email}</Text>
+            )
+          }
         </Box>
       </Flex>
       <NavMenu animate={isOpen ? 'open' : 'closed'}>
@@ -49,6 +68,18 @@ const MobileNavContext = (props: FlexProps) => {
 }
 
 const DesktopNavContent = (props: any) => {
+  const [email, setEmail] = useState('')
+  useEffect(() => {
+    let tokens = localStorage.getItem('token')
+    if (tokens) {
+      tokens = tokens.split('.')
+      setEmail(JSON.parse(atob(tokens[1])).username)
+    }
+    // console.log();
+
+  }, []);
+
+  console.log(email)
   return (
     <Flex className="nav-content__desktop" align="center" justify="space-between" {...props}>
       <Box as="a" href="/" rel="home">
@@ -67,9 +98,15 @@ const DesktopNavContent = (props: any) => {
         ))}
       </HStack>
       <HStack spacing="8" minW="100px" justify="space-between">
-        <Button bg="green.dark" _hover={{ bg: "green.dark.hover" }} color="white" as="a" href="/login" borderRadius="20" shadow="lg">
-          Sign In
-        </Button>
+        {!email && (
+          <Button bg="green.dark" _hover={{ bg: "green.dark.hover" }} color="white" as="a" href="/login" borderRadius="20" shadow="lg">
+            Sign In
+          </Button>)}
+        {
+          email && (
+            <Text fontWeight='bold'>Welcome, {email}</Text>
+          )
+        }
       </HStack>
     </Flex>
   )

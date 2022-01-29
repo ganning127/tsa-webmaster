@@ -21,15 +21,137 @@ import {
 import { HeadingWithDesc } from './Headings/HeadingWithDesc';
 import { MedHeading } from './Headings/MedHeading';
 import { Formik, Form } from 'formik';
-import { useState } from 'react';
 import Fade from 'react-reveal/Fade';
-
+import { useState, useEffect } from 'react'
 export const Application = ({ }) => {
-
+    const [email, setEmail] = useState('')
     const [isSubmitted, setIsSubmitted] = useState(false);
+
+    useEffect(async () => {
+        const response = await fetch('/api/getApplication', {
+            method: 'GET',
+            headers: {
+                'Content-Type': 'application/json',
+                'token': localStorage.getItem('token')
+            }
+        })
+        const data = await response.json();
+        const application = data.application;
+        console.log(data);
+        if (!application.firstname || !document.getElementById('firstname')) {
+            return;
+        }
+
+
+        document.getElementById('firstname').value = application.firstname;
+        document.getElementById('lastname').value = application.lastname;
+        document.getElementById('email').value = application.email;
+        document.getElementById('age').value = application.age;
+        document.getElementById('prog').value = application.prog;
+        document.getElementById('school').value = application.school;
+        document.getElementById('grade').value = application.grade;
+        document.getElementById('gpa').value = application.gpa;
+        document.getElementById('major').value = application.major;
+        document.getElementById('transcript').value = application.transcript;
+        document.getElementById('resume').value = application.resume;
+        document.getElementById('whyJoinEssay').value = application.whyJoinEssay;
+        document.getElementById('failureEssay').value = application.failureEssay;
+        document.getElementById('interestsEssay').value = application.interestsEssay;
+        document.getElementById('extraInfo').value = application.extraInfo;
+
+
+    }, [])
+
+    const handleSave = async (event) => {
+        event.preventDefault();
+        const firstname = document.getElementById('firstname').value;
+        const lastname = document.getElementById('lastname').value;
+        const email = document.getElementById('email').value;
+        const age = document.getElementById('age').value;
+        const prog = document.getElementById('prog').value;
+        const school = document.getElementById('school').value;
+        const grade = document.getElementById('grade').value;
+        const gpa = document.getElementById('gpa').value;
+        const major = document.getElementById('major').value;
+        const transcript = document.getElementById('transcript').value;
+        const resume = document.getElementById('resume').value;
+        const whyJoinEssay = document.getElementById('whyJoinEssay').value;
+        const failureEssay = document.getElementById('failureEssay').value;
+        const interestsEssay = document.getElementById('interestsEssay').value;
+        const extraInfo = document.getElementById('extraInfo').value;
+
+        const data = {
+            firstname,
+            lastname,
+            email,
+            age,
+            prog,
+            school,
+            grade,
+            gpa,
+            major,
+            transcript,
+            whyJoinEssay,
+            failureEssay,
+            interestsEssay,
+            extraInfo,
+            resume
+        }
+        const response = await fetch('/api/saveApplication', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'token': localStorage.getItem('token')
+            },
+            body: JSON.stringify(data)
+        })
+
+        const data2 = await response.json();
+        if (!data2.error) {
+            document.getElementById('saveMsg').style.display = 'block';
+        }
+
+
+    }
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        const firstname = document.getElementById('firstname').value;
+        const lastname = document.getElementById('lastname').value;
+        const email = document.getElementById('email').value;
+        const age = document.getElementById('age').value;
+        const prog = document.getElementById('prog').value;
+        const school = document.getElementById('school').value;
+        const grade = document.getElementById('grade').value;
+        const gpa = document.getElementById('gpa').value;
+        const major = document.getElementById('major').value;
+        const transcript = document.getElementById('transcript').value;
+        const resume = document.getElementById('resume').value;
+        const whyJoinEssay = document.getElementById('whyJoinEssay').value;
+        const failureEssay = document.getElementById('failureEssay').value;
+        const interestsEssay = document.getElementById('interestsEssay').value;
+        const extraInfo = document.getElementById('extraInfo').value;
+
+        const data = {
+            firstname,
+            lastname,
+            email,
+            age,
+            prog,
+            school,
+            grade,
+            gpa,
+            major,
+            transcript,
+            whyJoinEssay,
+            failureEssay,
+            interestsEssay,
+            extraInfo,
+            resume
+        }
+
+        setIsSubmitted(true);
+
     };
 
     return (
@@ -70,7 +192,7 @@ export const Application = ({ }) => {
 
                                         <FormControl isRequired borderRadius="20" color="gray.900">
                                             <FormLabel htmlFor='age' color="blue.dark">Age</FormLabel>
-                                            <NumberInput defaultValue={12} min={2} max={100}>
+                                            <NumberInput defaultValue={12} min={2} max={100} id='age'>
                                                 <NumberInputField />
                                                 <NumberInputStepper>
                                                     <NumberIncrementStepper />
@@ -80,7 +202,7 @@ export const Application = ({ }) => {
                                         </FormControl>
 
                                         <FormControl isRequired borderRadius="20" color="gray.900" >
-                                            <FormLabel htmlFor='email' color="blue.dark">Last Name</FormLabel>
+                                            <FormLabel htmlFor='email' color="blue.dark">Email</FormLabel>
                                             <Input id='email' type="text" placeholder='e.g. example@gmail.com' color="gray.900" />
                                         </FormControl>
 
@@ -112,7 +234,7 @@ export const Application = ({ }) => {
 
                                         <FormControl isRequired borderRadius="20" color="gray.900">
                                             <FormLabel htmlFor='grade' color="blue.dark">Grade</FormLabel>
-                                            <NumberInput defaultValue={5} min={2} max={100}>
+                                            <NumberInput defaultValue={5} min={2} max={100} id='grade'>
                                                 <NumberInputField />
                                                 <NumberInputStepper>
                                                     <NumberIncrementStepper />
@@ -167,7 +289,7 @@ export const Application = ({ }) => {
                             <Fade>
                                 <Box textAlign="center">
                                     <MedHeading>Teacher Recommendations</MedHeading>
-                                    <Text fontSize="xl">Please have your teacher email one (1) recommendation letter on your behalf to <Link href="mailto:teamroboreach@gmail.com" color="blue.light">rteamroboreach@gmail.com</Link></Text>
+                                    <Text fontSize="xl">Please have your teacher email one (1) recommendation letter on your behalf to <Link href="mailto:teamroboreach@gmail.com" color="blue.light">teamroboreach@gmail.com</Link></Text>
                                 </Box>
                             </Fade>
 
@@ -182,8 +304,11 @@ export const Application = ({ }) => {
                             </Fade>
 
                             <Fade>
+                                <Text id='saveMsg' bg='green.100' p={1} rounded='md' style={{ display: 'none' }}>
+                                    Application Saved
+                                </Text>
                                 <SimpleGrid columns={2} spacing={5} mt="4">
-                                    <Button borderColor="blue.light" color="blue.light" fontWeight="bold" fontSize="xl" variant="outline" mr={3}>
+                                    <Button borderColor="blue.light" color="blue.light" fontWeight="bold" fontSize="xl" variant="outline" mr={3} onClick={handleSave}>
                                         Save Progress
                                     </Button>
                                     <Button color="white" bg="blue.light" _hover={{ bg: "blue.dark" }} fontWeight="bold" fontSize="xl" type="submit">Submit</Button>
@@ -197,7 +322,7 @@ export const Application = ({ }) => {
                     </Form>
                 </Formik>}
 
-                {isSubmitted && <Text bg='blue.light' color='white' p='1' rounded='lg' fontSize="xl">We have received for your message! We will get back to you as soon as possible!</Text>}
+                {isSubmitted && <Text bg='blue.light' color='white' p='1' rounded='lg' fontSize="xl">We have received for your application! We will get back to you as soon as possible!</Text>}
             </Box>
 
         </>

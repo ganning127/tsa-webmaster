@@ -12,7 +12,22 @@ import { Application } from '../components/Application'
 import Steps from '../data/applicationSteps.json'
 import { MedSepNoLine } from '../components/Separators/MedSepNoLine'
 import Fade from 'react-reveal/Fade';
+import { useState, useEffect } from 'react'
 export default function Apply() {
+    const [email, setEmail] = useState('')
+    useEffect(() => {
+        let tokens = localStorage.getItem('token')
+        if (tokens) {
+            tokens = tokens.split('.')
+            setEmail(JSON.parse(atob(tokens[1])).username)
+        }
+        else {
+            setEmail('')
+            window.location.href = '/login'
+        }
+        // console.log();
+
+    }, []);
 
     return (
         <>
