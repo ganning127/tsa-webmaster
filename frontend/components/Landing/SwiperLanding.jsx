@@ -25,6 +25,7 @@ export const SwiperLanding = ({ title, desc, button, buttonLink, images }) => {
                     <Box
                         bgImage="url('/temp_lego.png')"
                         bgRepeat="no-repeat"
+                        bgPos="center"
                         h="70vh"
                         w="100vw"
                         bgSize="cover"
@@ -35,7 +36,7 @@ export const SwiperLanding = ({ title, desc, button, buttonLink, images }) => {
                         <Box textAlign="center">
                             <Heading
                                 as="h1"
-                                fontSize="8xl"
+                                fontSize={{ base: '3xl', lg: '8xl' }}
                                 fontWeight="bold"
                                 color="white"
                                 textAlign="center"
@@ -44,7 +45,7 @@ export const SwiperLanding = ({ title, desc, button, buttonLink, images }) => {
                             </Heading>
                             <Text
                                 as="p"
-                                fontSize="2xl"
+                                fontSize={{ base: 'xl', lg: '2xl' }}
                                 fontStyle="italic"
                                 color="white"
                                 textAlign="center"
@@ -75,6 +76,7 @@ export const SwiperLanding = ({ title, desc, button, buttonLink, images }) => {
                     <Box
                         bgImage="url('/temp_team.png')"
                         bgRepeat="no-repeat"
+                        bgPos="center"
                         h="70vh"
                         w="100vw"
                         bgSize="cover"
@@ -85,7 +87,7 @@ export const SwiperLanding = ({ title, desc, button, buttonLink, images }) => {
                         <Box textAlign="center">
                             <Heading
                                 as="h1"
-                                fontSize="8xl"
+                                fontSize={{ base: '3xl', lg: '8xl' }}
                                 fontWeight="bold"
                                 color="white"
                                 textAlign="center"
@@ -94,7 +96,7 @@ export const SwiperLanding = ({ title, desc, button, buttonLink, images }) => {
                             </Heading>
                             <Text
                                 as="p"
-                                fontSize="2xl"
+                                fontSize={{ base: 'xl', lg: '2xl' }}
                                 fontStyle="italic"
                                 color="white"
                                 textAlign="center"

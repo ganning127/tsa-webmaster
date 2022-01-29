@@ -1,12 +1,12 @@
 import { userLogin, userSignUp } from "../db/auth.mjs"
 
-export default async function(fastify, options) {
+export default async function (fastify, options) {
     fastify.post("/api/user/login", async function (request, reply) {
         const username = request.body.username
         const password = request.body.password
 
         const collection = this.mongo.db.collection("users")
-        
+
         try {
             const token = await userLogin(collection, username, password)
             reply.send({ token })

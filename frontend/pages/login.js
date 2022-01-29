@@ -81,9 +81,18 @@ export default function Home() {
                                     >
                                         <Box>
                                             <Text fontSize='md' mb="0">Welcome back</Text>
-                                            <Text fontWeight="bold" fontSize='3xl' mb="3" color='blue.dark'>Student Login</Text>
-
+                                            <Text fontWeight="bold" fontSize='3xl' color='blue.dark'>Student Login</Text>
                                             <Text bg="red.100" p={2} rounded="lg" style={{ display: 'none' }} id='error'>Wrong username or password</Text>
+                                        </Box>
+
+                                        <Box bg='blue.100' rounded='md' p={1}>
+                                            TSA Sample Login
+                                            <Box>
+                                                <Text fontWeight="bold" d='inline'>Email:</Text> john@doe.com
+                                            </Box>
+                                            <Box>
+                                                <Text fontWeight="bold" d='inline'>Password:</Text> password
+                                            </Box>
                                         </Box>
 
 

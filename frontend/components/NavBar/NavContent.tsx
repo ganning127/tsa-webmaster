@@ -33,7 +33,7 @@ const MobileNavContext = (props: FlexProps) => {
   const { isOpen, onToggle } = useDisclosure()
   return (
     <>
-      <Flex align="center" justify="space-between" className="nav-content__mobile" {...props}>
+      <Flex align="center" justify="space-between" className="nav-content__mobile" {...props} overflowX='hidden'>
         <Box>
           <ToggleButton isOpen={isOpen} onClick={onToggle} />
         </Box>
