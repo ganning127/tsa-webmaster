@@ -44,8 +44,9 @@ export default function Home() {
             desc="RoboReach is a non-profit organization that uses robotics to build the leaders of tomorrow. We are building a community of young people who are passionate about building a better future for themselves and their communities."
             button="Learn More"
             buttonLink="/about"
-            image='/temp_first.png'
+            image='/temp_first.jpeg'
             color="green.dark"
+            radius='md'
             hoverColor="green.dark.hover"
           />
 
@@ -62,7 +63,7 @@ export default function Home() {
           <TwoColTextWithPic
             pic='/common_build.png'
             title="Common Build"
-            desc="Students are led step-by-step through the process of building a basic LEGO® MINDSTORMS® robot  to introduce fundamental principles and concepts. Instructors will guide groups of students through live-sessions in order to ensure full participation and mastery of the concepts."
+            desc="Students are led step-by-step through the process of building a basic LEGO® MINDSTORMS® robot  to introduce fundamental principles and concepts. Instructors will guide groups of students through live-sessions in order to ensure full participation and mastery of the concepts.  "
             align="left"
             keyword="Grades"
             value="K-3"

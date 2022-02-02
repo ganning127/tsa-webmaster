@@ -27,34 +27,36 @@ export default function Home() {
             <Container maxW="container.xl" mt="8">
                 <Fade>
                     <TwoColWithPic
-                        pic='/temp_first.png'
+                        pic='/about.jpg'
                         title="About Us"
                         desc="RoboReach is a non-profit organization that uses robotics to build the leaders of tomorrow. We are building a community of young people who are passionate about building a better future for themselves and their communities."
                         button1="Learn More"
                         link1="/about"
                         button2="Sign Up"
                         link2="/apply"
+                        radius="md"
                     />
 
                     <MedSep />
 
                     <LeftTextWithButton
                         title="Our Mission"
-                        desc="RoboReach is a non-profit organization that uses robotics to build the leaders of tomorrow. We are building a community of young people who are passionate about building a better future for themselves and their communities."
+                        desc="For no cost, underprivileged students around the nation are provided with remote STEM opportunities focused in robotics. In these programs, students not only gain a foundation in key STEM principles but also advanced skills that give them an academic and professional edge. 
+                        "
                         button="Learn More"
                         buttonLink="/about"
-                        image="/temp_playing.png"
+                        image="/hand.png"
                         radius="md"
                     />
                     <MedSep />
                     <SubSection
                         title="Our Story"
-                        desc="While thinking about how to win TSA, we came up with a grand idea of RoboReach. I really like making up things to type instead of using lorem ipsum haha. While thinking about how to win TSA, we came up with a grand idea of RoboReach. I really like making up things to type instead of using lorem ipsum haha."
+                        desc="With the start of the coronavirus and all schools being shut down, we found that students were lacking continual learning simulation over the summer with the loss of in person opportunities. Starting RoboReach, we aimed to create a program to fill this hole and provide STEM inspiration and opportunites to students. We strive to continue these efforts through and after the coronavirus pandemic in order to bridge accessibility and overcome the poverty gap. "
                     />
                     <MedSep />
                     <LeftTextWithButton
                         title="Our Vision"
-                        desc="Within the next 10 years, we hope to exapnd into a global market, providing students in not only the United States with a fun, quality education. We hope to do this by sucking dick and making sure that we have a brain instead of being brain dead. If your interests align with ours, please don’t hesitate to sign to be a mentor!"
+                        desc="Using a remote format, we seek to use technology to increase accessibilty and awareness of STEM in these communites, reaching demographics that are lacking not only representation in STEM fields but general educational resources as well. We envision our organization expanding to bridge technology gaps not only locally but globally as well. "
                         button="Learn More"
                         buttonLink="/about"
                         image="/temp_vision.png"

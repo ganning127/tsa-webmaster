@@ -39,12 +39,13 @@ export default function Impact({ posts }) {
             <Container maxW="container.xl" mt="8">
                 <Fade>
                     <TwoColWithPic
-                        pic='/temp_first.png'
+                        pic='/impact.jpeg'
                         title="Our Impact"
                         desc="RoboReach is a non-profit organization that uses robotics to build the leaders of tomorrow. We are building a community of young people who are passionate about building a better future for themselves and their communities."
                         button1="Our Blog"
                         link1="#blog"
                         align="left"
+                        radius='md'
                     />
 
                     <MedSep />

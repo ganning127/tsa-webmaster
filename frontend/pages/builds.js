@@ -25,7 +25,7 @@ export default function Builds({ posts }) {
             <Container maxW="container.xl" mt="8">
                 <Fade>
                     <TwoColWithPic
-                        pic='/temp_builds.png'
+                        pic='/prog.jpeg'
                         title="Our Programs"
                         desc="All of our 3 programs are free!"
                         radius="md"

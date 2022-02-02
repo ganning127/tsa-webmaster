@@ -6,8 +6,8 @@
         "color": "green.dark",
         "pic_alt": "Common Build",
         "head1": "Description",
-        "desc1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-        "desc1_2": "The leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "desc1": "Students are led step-by-step through the process of building a basic LEGO® MINDSTORMS® robot  to introduce fundamental principles and concepts. Instructors will guide groups of students through live-sessions in order to ensure full participation and mastery of the concepts. Students in grades K-3 are encouraged to apply for the common build.",
+        "desc1_2": "All parts required for the build are included in the course, free of charge. Once you're accepted, we will email you for instructions on how to get started!",
         "head2": "Logistics",
         "desc2": "All classes will be taught remotely via RoboReach’s native livestream feature. If accepted, you’ll receive an email and be prompted to make an account.",
         "summerSession": "Daily: 9 - 11:30AM and 12 - 5PM",
@@ -31,35 +31,41 @@
             }
         ],
         "head4": "Requirements",
-        "desc4": "You don’t have previous experience in this field? Don’t worry! We’ve got your back, you could still apply for this positions! You are required to have strong communication skills to communicate effectively with students.",
+        "desc4": "Students in the common build program do not need any previous programming or mechanical experience. They will learn everything from scratch!",
         "button1": "Refer a Friend",
         "link1": "https://www.google.com",
         "button2": "Apply Now",
         "link2": "/apply"
     },
     {
-        "tabTitle": "Common Build",
-        "tabId": "common",
-        "pic": "/common_build.png",
-        "pic_alt": "Common Build",
+        "tabTitle": "Challenge Build",
+        "tabId": "challenge",
+        "pic": "/challenge_build.png",
+        "color": "blue.light",
+        "pic_alt": "Challenge Build",
         "head1": "Description",
-        "desc1": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.",
-        "desc1_2": "The leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.",
+        "desc1": "Students are given tasks that the robot should be able to complete, designing and building the robot from a variety of available parts. Instructors will guide students through each step of the process through live chat and video. Students in grades 4-7 are encouraged to apply for the challenge build.",
+        "desc1_2": "All parts required for the build are included in the course, free of charge. Once you're accepted, we will email you for instructions on how to get started!",
         "head2": "Logistics",
         "desc2": "All classes will be taught remotely via RoboReach’s native livestream feature. If accepted, you’ll receive an email and be prompted to make an account.",
-        "summerSession": "Daily: 9 - 11:30AM and 12 - 5PM",
-        "schoolSession": "Mondays, Wednesdays, Fridays: 5 - 9PM",
+        "summerSession": "Daily: 8 - 12:30AM and 2 - 7PM",
+        "schoolSession": "Tuesdays, Thursdays: 5 - 9PM",
         "head3": "Week Breakdown",
         "weeks": [
             {
-                "title": "Week 1",
+                "title": "Week 0",
                 "desc": "We’ll ship you all the materials you need for the first week’s lesson. This week will focus on knowing what you have and how to use each part!",
                 "pic": "/boxes.png"
             },
             {
-                "title": "Weeks 2-4",
-                "desc": "Build your robot! We’ll walk through the instructions with you on not only how to build your robot but also in best practices!",
-                "pic": "/tools.png"
+                "title": "Week 1-3",
+                "desc": "Build the drivetrain! We’ll walk through the instructions with you on not only how to build your robot but also in best practices!",
+                "pic": "/drivetrain.svg"
+            },
+            {
+                "title": "Week 3-5",
+                "desc": "Add the functionality of the robot! Whether it be arms, claws, or any other part, we’ll walk through how to build it!",
+                "pic": "/arm.png"
             },
             {
                 "title": "Week 5-8",
@@ -68,7 +74,45 @@
             }
         ],
         "head4": "Requirements",
-        "desc4": "You don’t have previous experience in this field? Don’t worry! We’ve got your back, you could still apply for this positions! You are required to have strong communication skills to communicate effectively with students. Excited? We are waiting for your application. All the best for your application from TCF :)",
+        "desc4": "Students in the challenge build program should have basic programming and mechanical experience. There will be a lot of challenges to solve!",
+        "button1": "Refer a Friend",
+        "link1": "https://www.google.com",
+        "button2": "Apply Now",
+        "link2": "/apply"
+    },
+    {
+        "tabTitle": "Creative Build",
+        "tabId": "creative",
+        "pic": "/creative_build.png",
+        "color": "green.dark",
+        "pic_alt": "Creative Build",
+        "head1": "Description",
+        "desc1": "Each student will design and create a unique build that addresses a problem they decide on. Students will be matched with a mentor who will guide them through the entire process, helping them decide on materials, a design, and the building process",
+        "desc1_2": "All parts required for the build are included in the course, free of charge. Once you're accepted, we will email you for instructions on how to get started!",
+        "head2": "Logistics",
+        "desc2": "All classes will be taught remotely via RoboReach’s native livestream feature. If accepted, you’ll receive an email and be prompted to make an account.",
+        "summerSession": "Daily: 10 - 1:00PM and 5 - 7PM",
+        "schoolSession": "Saturdays, Sundays: 5 - 7PM",
+        "head3": "Week Breakdown",
+        "weeks": [
+            {
+                "title": "Week 1",
+                "desc": "Plan out your build. This will let us know which materials you’ll need and how to build it, and allows us to match you with a mentor.",
+                "pic": "/plan.png"
+            },
+            {
+                "title": "Week 2-6",
+                "desc": "Build the MVP of your project! Try to have a functioning prototype here, and we can improve upon it with the next few weeks!",
+                "pic": "/min.png"
+            },
+            {
+                "title": "Week 6-8",
+                "desc": "Add the finishing touches to your robot! You can submit this to competitions, scholarships, and even write about it on your college application!",
+                "pic": "/done.png"
+            }
+        ],
+        "head4": "Requirements",
+        "desc4": "Students in the creative build program should have either compeleted the challenge build or have a decent amount of previous experience in robotics. There is much less 'hand-holding' than in the challenge build!",
         "button1": "Refer a Friend",
         "link1": "https://www.google.com",
         "button2": "Apply Now",

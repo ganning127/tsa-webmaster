@@ -110,10 +110,10 @@ export const FullTabs = ({ data }) => {
                                     </Box>
 
                                     <HStack direction='vertical' mt="10" justifyContent="center" spacing="40px" >
-                                        <Button color={item.color} px={10} bg='transparent' _hover={{ color: item.color + '.hover' }} fontSize='xl'>
+                                        <Button as='a' href={item.link1} color={item.color} px={10} bg='transparent' _hover={{ color: item.color + '.hover' }} fontSize='xl'>
                                             Refer a friend
                                         </Button>
-                                        <Button bg={item.color} color='white' px={10} fontSize='xl' _hover={{ bg: item.color + '.hover' }}>
+                                        <Button as='a' href={item.link2} bg={item.color} color='white' px={10} fontSize='xl' _hover={{ bg: item.color + '.hover' }}>
                                             Apply now
                                         </Button>
 

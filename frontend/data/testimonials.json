@@ -1,37 +1,30 @@
 [
     {
-        "name": "Peter Schon",
-        "title": "TCF Student",
-        "img": "/pfpPlaceHolder.png",
+        "name": "Timothy Dougherty",
+        "title": "Parent of Common Build Student",
+        "img": "/t1.jpeg",
         "rating": 5,
-        "review": "“The Coding Foundation Helped me to achieve my long lasting goals in just 2 hours of class daily for 3 weeks for free!”"
+        "review": "““This program has provided my children with the tools they need to properly learn and develop in such a fast-moving world.”"
     },
     {
-        "name": "Peter Schon",
-        "title": "TCF Student",
-        "img": "/pfpPlaceHolder.png",
+        "name": "Jessica Smith",
+        "title": "Student, Grade 6 (Challenge Build)",
+        "img": "/t2.jpeg",
         "rating": 5,
-        "review": "“The Coding Foundation Helped me to achieve my long lasting goals in just 2 hours of class daily for 3 weeks for free!”"
+        "review": "“The instructors were very helpful, guiding me the entire time and helping me when I messed up!”"
     },
     {
-        "name": "Peter Schon",
-        "title": "TCF Student",
-        "img": "/pfpPlaceHolder.png",
+        "name": "Joseph Miller",
+        "title": "Student, Grade 11 (Creative Build)",
+        "img": "/t3.jpeg",
         "rating": 5,
-        "review": "“The Coding Foundation Helped me to achieve my long lasting goals in just 2 hours of class daily for 3 weeks for free!”"
+        "review": "“Designing and building a robot was the most fun and interactive activity I have done in a while, and I was always able to ask for help.”"
     },
     {
-        "name": "Peter Schon",
-        "title": "TCF Student",
-        "img": "/pfpPlaceHolder.png",
+        "name": "Jane Brown",
+        "title": "Student, Grade 8 (Creative Build)",
+        "img": "/t4.jpeg",
         "rating": 5,
-        "review": "“The Coding Foundation Helped me to achieve my long lasting goals in just 2 hours of class daily for 3 weeks for free!”"
-    },
-    {
-        "name": "Peter Schon",
-        "title": "TCF Student",
-        "img": "/pfpPlaceHolder.png",
-        "rating": 5,
-        "review": "“The Coding Foundation Helped me to achieve my long lasting goals in just 2 hours of class daily for 3 weeks for free!”"
+        "review": "“Prior to coming to RoboReach, I have been involved with robotics for around 3 years now. Yet, RoboReach's creative build program was still fun and exciting for me.”"
     }
 ]
