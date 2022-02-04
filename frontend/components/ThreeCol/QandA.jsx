@@ -5,9 +5,11 @@ export const QandA = ({ data }) => {
         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={20}>
             {data.map((item, index) => {
                 return (
-                    <Box key={index}>
-                        <Heading color='green.dark'>{item.question}</Heading>
-                        <Text fontSize='xl' mt='4'>{item.answer}</Text>
+                    <Box>
+                        <Box key={index} shadow='lg' p={4} rounded='md' >
+                            <Heading color='green.dark'>{item.question}</Heading>
+                            <Text fontSize='xl' mt='4'>{item.answer}</Text>
+                        </Box>
                     </Box>
 
                 )

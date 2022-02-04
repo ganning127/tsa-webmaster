@@ -37,10 +37,10 @@ export const Testimonials = () => {
                         People.map((person, index) => {
                             return (
                                 <SwiperSlide key={index}>
-                                    <Box shadow="md" p={4} my="10">
+                                    <Box shadow="md" p={4} my="10" rounded='md'>
                                         <WrapItem>
-                                            <Avatar src={person.img} mr="2" size='xl' />
-                                            <Box alignSelf="center">
+                                            <Avatar src={person.img} mr="4" size='lg' />
+                                            <Box alignSelf="center" mt='3'>
                                                 <Text
                                                     fontSize="xl"
                                                     fontWeight="bold"
@@ -69,6 +69,8 @@ export const Testimonials = () => {
 
                                         <Text
                                             fontSize="xl"
+                                            textAlign='left'
+                                            mt='2'
                                         >
                                             {person.review}
                                         </Text>
