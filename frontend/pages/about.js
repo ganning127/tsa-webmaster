@@ -8,6 +8,7 @@ import { CardDisplay } from '../components/ThreeCol/CardDisplay'
 import { HeadingWithDesc } from '../components/Headings/HeadingWithDesc'
 import { MedSepNoLine } from '../components/Separators/MedSepNoLine'
 import { TwoColWithPic } from '../components/Landing/TwoColWithPic'
+import { TwoColTextWithPic } from '../components/TwoCol/TwoColTextWithPic'
 import { SubSection } from '../components/OneCol/SubSection'
 import Serve from '../data/whoWeServe.json'
 import Fade from 'react-reveal/Fade';
@@ -29,9 +30,9 @@ export default function Home() {
                     <TwoColWithPic
                         pic='/about.jpg'
                         title="About Us"
-                        desc="RoboReach is a non-profit organization that uses robotics to build the leaders of tomorrow. We are building a community of young people who are passionate about building a better future for themselves and their communities."
+                        desc="RoboReach is a non-profit organization that uses robotics to build the leaders of tomorrow. We are fostering a communtity of youth who are passionate about creating a better future for themselves and their communities."
                         button1="Learn More"
-                        link1="/about"
+                        link1="#subsection"
                         button2="Sign Up"
                         link2="/apply"
                         radius="md"
@@ -39,19 +40,23 @@ export default function Home() {
 
                     <MedSep />
 
-                    <LeftTextWithButton
+                    <TwoColTextWithPic
                         title="Our Mission"
                         desc="For no cost, underprivileged students around the nation are provided with remote STEM opportunities focused in robotics. In these programs, students not only gain a foundation in key STEM principles but also advanced skills that give them an academic and professional edge. 
                         "
-                        button="Learn More"
+                        buttonText="Learn More"
                         buttonLink="/about"
-                        image="/hand.png"
+                        pic="/hand.png"
                         radius="md"
+                        align='right'
+                        color='blue.light'
+                        hoverColor='blue.dark'
+
                     />
                     <MedSep />
                     <SubSection
                         title="Our Story"
-                        desc="With the start of the coronavirus and all schools being shut down, we found that students were lacking continual learning simulation over the summer with the loss of in person opportunities. Starting RoboReach, we aimed to create a program to fill this hole and provide STEM inspiration and opportunites to students. We strive to continue these efforts through and after the coronavirus pandemic in order to bridge accessibility and overcome the poverty gap. "
+                        desc="With the start of the coronavirus and all schools being shut down, we found that students were lacking continual learning stimulation over the summer with the loss of in person opportunities. Starting RoboReach, we aimed to create a program to fill this hole and provide STEM inspiration and opportunites to students. We strive to continue these efforts through and after the coronavirus pandemic in order to bridge accessibility and overcome the poverty gap. "
                     />
                     <MedSep />
                     <LeftTextWithButton

@@ -15,12 +15,12 @@
         "head3": "Week Breakdown",
         "weeks": [
             {
-                "title": "Week 1",
+                "title": "Week 0",
                 "desc": "We’ll ship you all the materials you need for the first week’s lesson. This week will focus on knowing what you have and how to use each part!",
                 "pic": "/boxes.png"
             },
             {
-                "title": "Weeks 2-4",
+                "title": "Weeks 1-4",
                 "desc": "Build your robot! We’ll walk through the instructions with you on not only how to build your robot but also in best practices!",
                 "pic": "/tools.png"
             },
@@ -48,7 +48,7 @@
         "desc1_2": "All parts required for the build are included in the course, free of charge. Once you're accepted, we will email you for instructions on how to get started!",
         "head2": "Logistics",
         "desc2": "All classes will be taught remotely via RoboReach’s native livestream feature. If accepted, you’ll receive an email and be prompted to make an account.",
-        "summerSession": "Daily: 8 - 12:30AM and 2 - 7PM",
+        "summerSession": "Daily: 8 AM - 12:30 PM and 2 - 7PM",
         "schoolSession": "Tuesdays, Thursdays: 5 - 9PM",
         "head3": "Week Breakdown",
         "weeks": [
@@ -84,7 +84,7 @@
         "tabTitle": "Creative Build",
         "tabId": "creative",
         "pic": "/creative_build.png",
-        "color": "green.dark",
+        "color": "blue.dark",
         "pic_alt": "Creative Build",
         "head1": "Description",
         "desc1": "Each student will design and create a unique build that addresses a problem they decide on. Students will be matched with a mentor who will guide them through the entire process, helping them decide on materials, a design, and the building process",
@@ -96,19 +96,34 @@
         "head3": "Week Breakdown",
         "weeks": [
             {
-                "title": "Week 1",
-                "desc": "Plan out your build. This will let us know which materials you’ll need and how to build it, and allows us to match you with a mentor.",
+                "title": "Week 0",
+                "desc": "We will ship out a base kit full of things students will use to help them throughout the course remotely! ",
                 "pic": "/plan.png"
             },
             {
-                "title": "Week 2-6",
-                "desc": "Build the MVP of your project! Try to have a functioning prototype here, and we can improve upon it with the next few weeks!",
+                "title": "Week 1",
+                "desc": "Students will learn/review basic mechanical design prociples and practices and learn how to fully utlize the provided base engineering kit!",
                 "pic": "/min.png"
             },
             {
-                "title": "Week 6-8",
-                "desc": "Add the finishing touches to your robot! You can submit this to competitions, scholarships, and even write about it on your college application!",
-                "pic": "/done.png"
+                "title": "Week 2",
+                "desc": "Full familirzed with mechanical design, students will start to braistorm and design their robots. this means outlining a specific purpose, design overview and a construction timeline. our mentors will help students design a robot that they are not only passionate about, but is feasible to fully construct through remote instruction!",
+                "pic": "/pan.png"
+            },
+            {
+                "title": "Week 3",
+                "desc": "This is when all students will finalize their design using Computer Aided Design to hash out specifics such as materials, assembly, and electronics. Students will also have the option to custom design metal parts for our mentors to fabricate in their professional facilities using tools such as a metal cnc, lathe, and drill press!",
+                "pic": "/cad.png"
+            },
+            {
+                "title": "Week 4-6",
+                "desc": "After the needed materials and tools are gathered and shipped to the students, they will fully construct their robot in accordance to how they designed it in week 3.",
+                "pic": "/hammer.png"
+            },
+            {
+                "title": "Week 7-8",
+                "desc": "In the final weeks of the program, students finish up any finsihing touches to their robot and create presentations and pitches for their robots for not only parents, but industry professionals for review and critique!",
+                "pic": "/reviews.png"
             }
         ],
         "head4": "Requirements",

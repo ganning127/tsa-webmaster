@@ -1,6 +1,11 @@
 {
     "languages": [
         {
+            "name": "Node.js",
+            "desc": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.",
+            "url": "https://reactjs.org/"
+        },
+        {
             "name": "React.js",
             "desc": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.",
             "url": "https://reactjs.org/"
@@ -12,6 +17,21 @@
         },
         {
             "name": "Chakra UI",
+            "desc": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.",
+            "url": "https://chakra-ui.com/"
+        },
+        {
+            "name": "MongoDB",
+            "desc": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.",
+            "url": "https://chakra-ui.com/"
+        },
+        {
+            "name": "Fastify",
+            "desc": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.",
+            "url": "https://chakra-ui.com/"
+        },
+        {
+            "name": "JWT",
             "desc": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.",
             "url": "https://chakra-ui.com/"
         }

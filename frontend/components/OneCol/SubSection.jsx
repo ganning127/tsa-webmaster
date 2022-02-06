@@ -4,6 +4,7 @@ export const SubSection = ({ title, desc }) => {
         <Box
             textAlign="center"
             p="4"
+            id='subsection'
         >
             <Heading
 
@@ -16,7 +17,7 @@ export const SubSection = ({ title, desc }) => {
             </Heading>
             <Text
                 as="p"
-                fontSize="xl"
+                fontSize="2xl"
                 mt="3"
             >
                 {desc}

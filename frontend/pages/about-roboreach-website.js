@@ -20,7 +20,7 @@ export default function AboutRoboReachWebsites({ posts }) {
             </Head>
 
 
-            <NavBar active="application" />
+            <NavBar active="about" />
 
             <Container maxW="container.xl" mt="8">
                 <Fade>

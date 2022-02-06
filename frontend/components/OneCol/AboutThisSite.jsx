@@ -17,7 +17,7 @@ export const AboutThisSite = () => {
 
             <MedSep />
 
-            <HeadingWithDesc>Langauges</HeadingWithDesc>
+            <HeadingWithDesc>Utlitliized Tools</HeadingWithDesc>
             <SimpleGrid columns={{ base: 1, lg: 2 }} spacing={10} mt="4">
                 {Langs.languages.map((lang, index) => (
                     <Box key={index} shadow='lg' rounded='md' p={4}>
@@ -32,7 +32,7 @@ export const AboutThisSite = () => {
             <MedSep />
 
             <HeadingWithDesc>Site description</HeadingWithDesc>
-            <Text fontSize='xl' my="2">Roboreach is a non-profit organization that strives to do TODo.</Text>
+            <Text fontSize='xl' my="2">Roboreach is a non-profit organization that strives to bring technical education about robotics to everyone, regardless of previous experience and financial status. This website was built using React.js, Next.js, Next.js, ChakraUI, MongoDB, and Fastify.</Text>
         </Box>
     )
 }

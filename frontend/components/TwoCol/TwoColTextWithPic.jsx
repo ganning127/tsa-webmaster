@@ -11,11 +11,11 @@ export const TwoColTextWithPic = ({ pic, title, desc, align, buttonText, buttonL
                     {title && <Heading color={color} fontWeight="bold">{title}</Heading>}
                     <Text my="3" fontSize="2xl" color="text.dark">{desc}</Text>
 
-                    <Box mb="3">
+                    {keyword && <Box mb="3">
                         <Text d="inline" color={color} fontWeight="bold" fontSize="xl">
                             {keyword}: <chakra.span color="text.dark">{value}</chakra.span>
                         </Text>
-                    </Box>
+                    </Box>}
 
 
                     <Button as="a" href={buttonLink} bg={color} color="white" fontSize="xl" fontWeight="bold" shadow="lg" _hover={{ bg: hoverColor }}>{buttonText}</Button>
@@ -31,11 +31,11 @@ export const TwoColTextWithPic = ({ pic, title, desc, align, buttonText, buttonL
                     {title && <Heading color={color} fontWeight="bold">{title}</Heading>}
                     <Text my="3" fontSize="2xl" color="text.dark">{desc}</Text>
 
-                    <Box mb="3">
+                    {keyword && <Box mb="3">
                         <Text d="inline" color={color} fontWeight="bold" fontSize="xl">
                             {keyword}: <chakra.span color="text.dark">{value}</chakra.span>
                         </Text>
-                    </Box>
+                    </Box>}
 
                     <Button as="a" href={buttonLink} bg={color} color="white" fontSize="xl" fontWeight="bold" shadow="lg" _hover={{ bg: hoverColor }}>{buttonText}</Button>
                 </Box>

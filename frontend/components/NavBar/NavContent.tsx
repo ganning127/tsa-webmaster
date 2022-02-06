@@ -8,8 +8,18 @@ import {
   useColorModeValue as mode,
   useDisclosure,
   VisuallyHidden,
-  Img
+  Img,
+  Menu,
+  MenuButton,
+  MenuList,
+  MenuItem,
+  MenuItemOption,
+  MenuGroup,
+  MenuOptionGroup,
+  MenuDivider,
+  chakra
 } from '@chakra-ui/react'
+import { ChevronDownIcon } from '@chakra-ui/icons'
 import * as React from 'react'
 import { NavLink } from './NavLink.tsx'
 import { NavMenu } from './NavMenu.tsx'
@@ -75,9 +85,12 @@ const DesktopNavContent = (props: any) => {
       tokens = tokens.split('.')
       setEmail(JSON.parse(atob(tokens[1])).username)
     }
-    // console.log();
-
   }, []);
+
+  const handleSignOut = () => {
+    localStorage.removeItem('token')
+    window.location.href = '/'
+  }
 
   console.log(email)
   return (
@@ -104,7 +117,23 @@ const DesktopNavContent = (props: any) => {
           </Button>)}
         {
           email && (
-            <Text fontWeight='bold'>Welcome, {email}</Text>
+
+            <Menu>
+              <MenuButton
+                px={4}
+                py={2}
+                transition='all 0.2s'
+                borderRadius='md'
+                _hover={{ bg: 'gray.100' }}
+                _focus={{ boxShadow: 'outline' }}
+                fontWeight='bold'
+              >
+                Welcome, <chakra.span color='green.dark'>{email}</chakra.span><ChevronDownIcon />
+              </MenuButton>
+              <MenuList>
+                <MenuItem onClick={handleSignOut}>Log Out</MenuItem>
+              </MenuList>
+            </Menu>
           )
         }
       </HStack>

@@ -1,6 +1,18 @@
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Text, Heading, Img, Button, Box, SimpleGrid, HStack } from '@chakra-ui/react'
+import copy from 'clipboard-copy'
+import { useState } from 'react'
 
 export const FullTabs = ({ data }) => {
+    const [clicked, setClicked] = useState(false);
+
+    const copyRefer = () => {
+        setClicked(true);
+        copy("https://tsa-webmaster.vercel.app/apply")
+        setTimeout(() => {
+            setClicked(false);
+        }, 1000);
+    }
+
     return (
         <>
             <Tabs variant="unstyled" textAlign="center">
@@ -110,8 +122,9 @@ export const FullTabs = ({ data }) => {
                                     </Box>
 
                                     <HStack direction='vertical' mt="10" justifyContent="center" spacing="40px" >
-                                        <Button as='a' href={item.link1} color={item.color} px={10} bg='transparent' _hover={{ color: item.color + '.hover' }} fontSize='xl'>
-                                            Refer a friend
+                                        <Button color={item.color} px={10} bg='transparent' _hover={{ color: item.color + '.hover' }} fontSize='xl' onClick={copyRefer}>
+                                            {!clicked && <Text color={item.color} fontSize="xl" >Refer a friend</Text>}
+                                            {clicked && <Text color={item.color} fontSize="xl">Copied to clipboard!</Text>}
                                         </Button>
                                         <Button as='a' href={item.link2} bg={item.color} color='white' px={10} fontSize='xl' _hover={{ bg: item.color + '.hover' }}>
                                             Apply now
