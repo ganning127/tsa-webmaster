@@ -7,7 +7,7 @@ export const FullTabs = ({ data }) => {
 
     const copyRefer = () => {
         setClicked(true);
-        copy("https://tsa-webmaster.vercel.app/apply")
+        copy(window.location.href)
         setTimeout(() => {
             setClicked(false);
         }, 1000);
@@ -20,14 +20,13 @@ export const FullTabs = ({ data }) => {
                     {
                         data.map((item, index) => {
                             return (
-                                <Tab key={index} _selected={{
-                                    bg: '#F3F3F3'
-                                }}
+                                <Tab key={index}
                                     rounded="lg"
                                     fontWeight="bold"
                                     fontSize='lg'
                                     bg='transparent'
                                     _selected={{ color: item.color, bg: 'gray.100' }}
+                                    _focus={{}}
                                 >
                                     {item.tabTitle}
                                 </Tab>
@@ -62,23 +61,43 @@ export const FullTabs = ({ data }) => {
                                             <Heading color={item.color} fontSize="5xl">
                                                 {item.head2}
                                             </Heading>
+                                            <Text fontWeight='semibold' fontSize='xl'>All times are in Eastern Standard Time (EST)</Text>
                                             <Text color="text.dark" fontSize="xl" mt="2">
                                                 {item.desc2}
                                             </Text>
 
-                                            <Text color="text.dark" fontSize="2xl" mt="2" fontWeight='bold'>
-                                                Summer Session
-                                            </Text>
-                                            <Text color="text.dark" fontSize="xl" mt="">
-                                                {item.summerSession}
-                                            </Text>
+                                            <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={0} mt={3}>
+                                                <Box>
+                                                    <Text color={item.color} fontSize="2xl" mt="2" fontWeight='bold'>
+                                                        Academic Year Fall (2022)
+                                                    </Text>
+                                                    <Text color="text.dark" fontSize="xl" mt="">
+                                                        {item.schoolSessionFall}
+                                                    </Text>
+                                                </Box>
 
-                                            <Text color="text.dark" fontSize="2xl" mt="2" fontWeight='bold'>
-                                                Summer Session
-                                            </Text>
-                                            <Text color="text.dark" fontSize="xl" mt="">
-                                                {item.schoolSession}
-                                            </Text>
+                                                <Box>
+                                                    <Text color={item.color} fontSize="2xl" mt="2" fontWeight='bold'>
+                                                        Academic Year Spring (2023)
+                                                    </Text>
+                                                    <Text color="text.dark" fontSize="xl" mt="">
+                                                        {item.schoolSessionSpring}
+                                                    </Text>
+                                                </Box>
+
+
+                                                <Box>
+                                                    <Text color={item.color} fontSize="2xl" mt="2" fontWeight='bold'>
+                                                        Summer Session
+                                                    </Text>
+                                                    <Text color="text.dark" fontSize="xl" mt="">
+                                                        {item.summerSession}
+                                                    </Text>
+                                                </Box>
+
+                                            </SimpleGrid>
+
+
                                         </Box>
                                     </Box>
 
@@ -89,7 +108,7 @@ export const FullTabs = ({ data }) => {
                                         {
                                             item.weeks.map((week, index) => {
                                                 return (
-                                                    <SimpleGrid columns={{ base: 1, lg: 2 }} spacingY="30px" key={index} textAlign="left" alignItems="center" mt='70px'>
+                                                    <SimpleGrid columns={{ base: 1, lg: 2 }} key={index} textAlign="left" alignItems="center">
                                                         <Box mx='auto'>
                                                             <Text color={item.color} fontSize="2xl" mt="2" fontWeight="bold">
                                                                 {week.title}
@@ -122,7 +141,7 @@ export const FullTabs = ({ data }) => {
                                     </Box>
 
                                     <HStack direction='vertical' mt="10" justifyContent="center" spacing="40px" >
-                                        <Button color={item.color} px={10} bg='transparent' _hover={{ color: item.color + '.hover' }} fontSize='xl' onClick={copyRefer}>
+                                        <Button color={item.color} px={10} bg='transparent' _hover={{ color: item.color + '.hover' }} fontSize='xl' onClick={copyRefer} _focus={{}}>
                                             {!clicked && <Text color={item.color} fontSize="xl" >Refer a friend</Text>}
                                             {clicked && <Text color={item.color} fontSize="xl">Copied to clipboard!</Text>}
                                         </Button>

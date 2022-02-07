@@ -21,6 +21,161 @@ export const SwiperLanding = ({ title, desc, button, buttonLink, images }) => {
                     disableOnInteraction: false,
                 }}
             >
+
+                <SwiperSlide>
+                    <Box
+                        bgImage="linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/landing4.jpeg') "
+                        bgRepeat="no-repeat"
+                        bgPos="top"
+                        h="70vh"
+                        w="100vw"
+                        bgSize="cover"
+                        d="flex"
+                        justifyContent="center"
+                        alignItems="center"
+                    >
+                        <Box textAlign="center">
+                            <Heading
+                                as="h1"
+                                fontSize={{ base: '3xl', lg: '8xl' }}
+                                fontWeight="bold"
+                                color="white"
+                                textAlign="center"
+                            >
+                                {title}
+                            </Heading>
+                            <Text
+                                as="p"
+                                fontSize={{ base: 'xl', lg: '2xl' }}
+                                fontStyle="italic"
+                                color="white"
+                                textAlign="center"
+                            >
+                                {desc}
+                            </Text>
+
+                            <Button
+                                as="a"
+                                href={buttonLink}
+                                bg="blue.light"
+                                color="white"
+                                _hover={{
+                                    bg: 'blue.dark',
+                                }}
+                                fontSize="xl"
+                                mt="10px"
+                                px="10"
+                                shadow="lg"
+                            >
+                                {button}
+                            </Button>
+                        </Box>
+                    </Box>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <Box
+                        bgImage="linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/landing5.jpeg') "
+                        bgRepeat="no-repeat"
+                        bgPos="top"
+                        h="70vh"
+                        w="100vw"
+                        bgSize="cover"
+                        d="flex"
+                        justifyContent="center"
+                        alignItems="center"
+                    >
+                        <Box textAlign="center">
+                            <Heading
+                                as="h1"
+                                fontSize={{ base: '3xl', lg: '8xl' }}
+                                fontWeight="bold"
+                                color="white"
+                                textAlign="center"
+                            >
+                                {title}
+                            </Heading>
+                            <Text
+                                as="p"
+                                fontSize={{ base: 'xl', lg: '2xl' }}
+                                fontStyle="italic"
+                                color="white"
+                                textAlign="center"
+                            >
+                                {desc}
+                            </Text>
+
+                            <Button
+                                as="a"
+                                href={buttonLink}
+                                bg="blue.light"
+                                color="white"
+                                _hover={{
+                                    bg: 'blue.dark',
+                                }}
+                                fontSize="xl"
+                                mt="10px"
+                                px="10"
+                                shadow="lg"
+                            >
+                                {button}
+                            </Button>
+                        </Box>
+                    </Box>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                    <Box
+                        bgImage="linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/landing6.jpeg') "
+                        bgRepeat="no-repeat"
+                        bgPos="top"
+                        h="70vh"
+                        w="100vw"
+                        bgSize="cover"
+                        d="flex"
+                        justifyContent="center"
+                        alignItems="center"
+                    >
+                        <Box textAlign="center">
+                            <Heading
+                                as="h1"
+                                fontSize={{ base: '3xl', lg: '8xl' }}
+                                fontWeight="bold"
+                                color="white"
+                                textAlign="center"
+                            >
+                                {title}
+                            </Heading>
+                            <Text
+                                as="p"
+                                fontSize={{ base: 'xl', lg: '2xl' }}
+                                fontStyle="italic"
+                                color="white"
+                                textAlign="center"
+                            >
+                                {desc}
+                            </Text>
+
+                            <Button
+                                as="a"
+                                href={buttonLink}
+                                bg="blue.light"
+                                color="white"
+                                _hover={{
+                                    bg: 'blue.dark',
+                                }}
+                                fontSize="xl"
+                                mt="10px"
+                                px="10"
+                                shadow="lg"
+                            >
+                                {button}
+                            </Button>
+                        </Box>
+                    </Box>
+                </SwiperSlide>
+
+
                 <SwiperSlide>
                     <Box
                         bgImage="url('/temp_lego.png')"
@@ -227,158 +382,6 @@ export const SwiperLanding = ({ title, desc, button, buttonLink, images }) => {
                     </Box>
                 </SwiperSlide>
 
-                <SwiperSlide>
-                    <Box
-                        bgImage="linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/landing4.jpeg') "
-                        bgRepeat="no-repeat"
-                        bgPos="top"
-                        h="70vh"
-                        w="100vw"
-                        bgSize="cover"
-                        d="flex"
-                        justifyContent="center"
-                        alignItems="center"
-                    >
-                        <Box textAlign="center">
-                            <Heading
-                                as="h1"
-                                fontSize={{ base: '3xl', lg: '8xl' }}
-                                fontWeight="bold"
-                                color="white"
-                                textAlign="center"
-                            >
-                                {title}
-                            </Heading>
-                            <Text
-                                as="p"
-                                fontSize={{ base: 'xl', lg: '2xl' }}
-                                fontStyle="italic"
-                                color="white"
-                                textAlign="center"
-                            >
-                                {desc}
-                            </Text>
-
-                            <Button
-                                as="a"
-                                href={buttonLink}
-                                bg="blue.light"
-                                color="white"
-                                _hover={{
-                                    bg: 'blue.dark',
-                                }}
-                                fontSize="xl"
-                                mt="10px"
-                                px="10"
-                                shadow="lg"
-                            >
-                                {button}
-                            </Button>
-                        </Box>
-                    </Box>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <Box
-                        bgImage="linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/landing5.jpeg') "
-                        bgRepeat="no-repeat"
-                        bgPos="top"
-                        h="70vh"
-                        w="100vw"
-                        bgSize="cover"
-                        d="flex"
-                        justifyContent="center"
-                        alignItems="center"
-                    >
-                        <Box textAlign="center">
-                            <Heading
-                                as="h1"
-                                fontSize={{ base: '3xl', lg: '8xl' }}
-                                fontWeight="bold"
-                                color="white"
-                                textAlign="center"
-                            >
-                                {title}
-                            </Heading>
-                            <Text
-                                as="p"
-                                fontSize={{ base: 'xl', lg: '2xl' }}
-                                fontStyle="italic"
-                                color="white"
-                                textAlign="center"
-                            >
-                                {desc}
-                            </Text>
-
-                            <Button
-                                as="a"
-                                href={buttonLink}
-                                bg="blue.light"
-                                color="white"
-                                _hover={{
-                                    bg: 'blue.dark',
-                                }}
-                                fontSize="xl"
-                                mt="10px"
-                                px="10"
-                                shadow="lg"
-                            >
-                                {button}
-                            </Button>
-                        </Box>
-                    </Box>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                    <Box
-                        bgImage="linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('/landing6.jpeg') "
-                        bgRepeat="no-repeat"
-                        bgPos="top"
-                        h="70vh"
-                        w="100vw"
-                        bgSize="cover"
-                        d="flex"
-                        justifyContent="center"
-                        alignItems="center"
-                    >
-                        <Box textAlign="center">
-                            <Heading
-                                as="h1"
-                                fontSize={{ base: '3xl', lg: '8xl' }}
-                                fontWeight="bold"
-                                color="white"
-                                textAlign="center"
-                            >
-                                {title}
-                            </Heading>
-                            <Text
-                                as="p"
-                                fontSize={{ base: 'xl', lg: '2xl' }}
-                                fontStyle="italic"
-                                color="white"
-                                textAlign="center"
-                            >
-                                {desc}
-                            </Text>
-
-                            <Button
-                                as="a"
-                                href={buttonLink}
-                                bg="blue.light"
-                                color="white"
-                                _hover={{
-                                    bg: 'blue.dark',
-                                }}
-                                fontSize="xl"
-                                mt="10px"
-                                px="10"
-                                shadow="lg"
-                            >
-                                {button}
-                            </Button>
-                        </Box>
-                    </Box>
-                </SwiperSlide>
 
 
             </Swiper>

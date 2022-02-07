@@ -7,9 +7,11 @@ export const TeamCard = ({ name, title, about, pic }) => {
                 <Avatar size='2xl' name={name} src={pic} mx="auto" />
             </WrapItem>
 
-            <Text color="text.dark" fontWeight="bold">{name}</Text>
-            <Text color="blue.light" fontWeight="bold" my="2" fontStyle="italic">{title}</Text>
-            <Text color="text.dark" fontWeight="normal">{about}</Text>
+            <Box mt={4}>
+                <Text color="text.dark" fontWeight="bold">{name}</Text>
+                <Text color="blue.light" fontWeight="bold" my="1" fontStyle="italic">{title}</Text>
+                <Text color="text.dark" fontWeight="normal">{about}</Text>
+            </Box>
 
         </Box >
     )

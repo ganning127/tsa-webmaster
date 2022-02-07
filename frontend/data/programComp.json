@@ -1,0 +1,26 @@
+[
+    {
+        "title": "Academic Year Fall",
+        "year": "2022",
+        "desc": "The fall academic year program is designed to provide students with robotics experience while they are enrolled as a full time student.",
+        "dates": "Sep 19 - Nov 18 (8 weeks)",
+        "daysOfWeek": "Mondays, Wednesdays, Fridays",
+        "buildsOffered": "Common Build, Creative Build"
+    },
+    {
+        "title": "Academic Year Spring",
+        "year": "2023",
+        "desc": "The spring academic year program is designed to be balanced with a typical second semester workload in school.",
+        "dates": "Jan 23 - Mar 24 (8 weeks)",
+        "daysOfWeek": "Tuesdays, Thursdays, Saturdays",
+        "buildsOffered": "Common Build Challenge Build"
+    },
+    {
+        "title": "Summer",
+        "year": "2023",
+        "desc": "RoboReach's Summer program is designed to be a full day experience for the student. As such, students will create larger robots with more features in the summer program than the academic year program.",
+        "dates": "Jun 26 - Aug 25 (8 weeks)",
+        "daysOfWeek": "Mondays, Wednesdays, Fridays",
+        "buildsOffered": "Common Build, Challenge Build, Creative Build"
+    }
+]

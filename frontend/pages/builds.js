@@ -8,6 +8,7 @@ import { MedSepNoLine } from '../components/Separators/MedSepNoLine'
 import { TwoColWithPic } from '../components/Landing/TwoColWithPic'
 import Fade from 'react-reveal/Fade';
 import { FullTabs } from '../components/FullPage/FullTabs'
+import { ProgramComparison } from '../components/TwoCol/ProgramComparison'
 import Data from '../data/builds.json'
 
 export default function Builds({ posts }) {
@@ -33,6 +34,17 @@ export default function Builds({ posts }) {
                         link1="/apply"
                         align="left"
                     />
+
+                    <MedSep />
+
+                    <HeadingWithDesc
+                        title="Programs"
+                        desc="RoboReach offers 3 builds (common, challenge, and creative). Each build has both a summer and academic year program. Read more below to find out which is right for you!"
+                    >
+                        Program Time Comparison
+                    </HeadingWithDesc>
+
+                    <ProgramComparison />
 
                     <MedSep />
 

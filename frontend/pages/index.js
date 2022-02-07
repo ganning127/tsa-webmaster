@@ -15,6 +15,7 @@ import { TwoColPics } from '../components/TwoCol/TwoColPics'
 import { Contact } from '../components/TwoCol/Contact'
 import { MedSepNoLine } from '../components/Separators/MedSepNoLine'
 import Fade from 'react-reveal/Fade';
+import { HowItWorks } from '../components/HowItWorks'
 import { useEffect } from "react";
 
 export default function Home() {
@@ -52,6 +53,10 @@ export default function Home() {
 
 
           <MedSep />
+
+          <HowItWorks />
+
+          <MedSepNoLine />
 
           <HeadingWithDesc desc="All of our programs are free and virtual!">Benefits</HeadingWithDesc>
           <CardDisplay

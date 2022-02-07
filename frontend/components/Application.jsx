@@ -176,7 +176,7 @@ export const Application = ({ }) => {
 
                             <Fade>
                                 <Box>
-                                    <MedHeading desc="We'll never share your peresonal info with anyone.">Basic Information</MedHeading>
+                                    <MedHeading desc="We'll never share your personal info with anyone.">Basic Information</MedHeading>
                                     <SimpleGrid columns={{ base: 1, md: 2 }} spacing={5} mt="4">
                                         <FormControl isRequired borderRadius="20" color="gray.900">
                                             <FormLabel htmlFor='firstname' color="blue.dark">First Name</FormLabel>
@@ -210,9 +210,10 @@ export const Application = ({ }) => {
 
                                     <FormControl isRequired borderRadius="20" color="gray.900" mt={5} maxW='800px' mx='auto'>
                                         <FormLabel htmlFor='school' color="blue.dark">Program you're applying to</FormLabel>
-                                        <Select placeholder="Select program" id='prog'>
-                                            <option value="academicYearProg">Academic Year (Aug - Jun)</option>
-                                            <option value="summerProg">Summer (Jun - Aug)</option>
+                                        <Select id='prog' color='text.dark'>
+                                            <option value="academicYearFallProg">Academic Year Fall (2022, Sep 19 - Nov 18)</option>
+                                            <option value="academicYearSpringProg">Academic Year Spring (2023, Jan 23 - Mar 24)</option>
+                                            <option value="summerProg">Summer (2023, Jun 26 - Aug 25)</option>
                                         </Select>
                                     </FormControl>
                                 </Box>

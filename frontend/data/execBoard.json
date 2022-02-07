@@ -1,50 +1,38 @@
 [
     {
-        "name": "Mihika Shankar",
-        "title": "Founder & Chief Executive Officer",
-        "about": "Mihika Shankar is currently a high school student from New Jersey who is deeply invested in software development! A In her free time, Mihika enjoys reading, running, and programming!",
-        "pic": "/vivian.png"
+        "name": "Megan Smith",
+        "title": "Program Coordinator",
+        "about": "Megan is RoboReach’s Program Coordinator, with 10 years experience as Logistical Director and Relations Lead at IBM. He focuses on day-to-day operations, ensuring smooth programming, as well as ensuring all students receive the proper tools they need to successfully complete the program.",
+        "pic": "/p1.jpeg"
     },
     {
-        "name": "Vivian Song",
-        "title": "Chief Operating Officer",
-        "about": "Vivian is a rising senior from Ontario who is passionate about computer science and financial literacy. She has worked with several non-profit organizations including Youth Insights and The Teen Trillionaire in the efforts of improving the accessibility of youth opportunities. In her free time she enjoys watching true crime documentaries, reading and programming.",
-        "pic": "/vivian.png"
+        "name": "Brian Simpson",
+        "title": "Content Developer",
+        "about": "Brian has spent 24 years in the robotics industry working for various companies such as Boston Dynamics, Amazon, and Boeing, with 5 years of experience as a high school STEM educator. He currently focuses on creating material for our upper level programs focusing on kit and intention design.",
+        "pic": "/p2.jpeg"
     },
     {
-        "name": "Vivian Song",
-        "title": "Chief Operating Officer",
-        "about": "Vivian is a rising senior from Ontario who is passionate about computer science and financial literacy. She has worked with several non-profit organizations including Youth Insights and The Teen Trillionaire in the efforts of improving the accessibility of youth opportunities. In her free time she enjoys watching true crime documentaries, reading and programming.",
-        "pic": "/vivian.png"
+        "name": "Marc Piper",
+        "title": "General Operations Manager",
+        "about": "Marc is the General Operations Manager of Roboreach, ensuring that each part of our program is executed to the highest level. He has 9 years of experience as Regional Director at Walmart and 5 years of working experience as Logistics Manager at Google.",
+        "pic": "/p3.jpeg"
     },
     {
-        "name": "Vivian Song",
-        "title": "Chief Operating Officer",
-        "about": "Vivian is a rising senior from Ontario who is passionate about computer science and financial literacy. She has worked with several non-profit organizations including Youth Insights and The Teen Trillionaire in the efforts of improving the accessibility of youth opportunities. In her free time she enjoys watching true crime documentaries, reading and programming.",
-        "pic": "/vivian.png"
+        "name": "Shannon Aiello",
+        "title": "Development Lead",
+        "about": "Shannon is the Development Lead for RoboReach, ensuring the technical sides of our programs are always up and running. He has 5 years experience at IBM as a Client Engineer, and 3 years working at Twitch.",
+        "pic": "/p4.jpeg"
     },
     {
-        "name": "Vivian Song",
-        "title": "Chief Operating Officer",
-        "about": "Vivian is a rising senior from Ontario who is passionate about computer science and financial literacy. She has worked with several non-profit organizations including Youth Insights and The Teen Trillionaire in the efforts of improving the accessibility of youth opportunities. In her free time she enjoys watching true crime documentaries, reading and programming.",
-        "pic": "/vivian.png"
+        "name": "Lauren Doe",
+        "title": "Outreach Director",
+        "about": "Lauren is the Outreach Director of RoboReach, strengthing the relationship between our organization and the community. She has previously spent time in the Salvation Army as Corporate Relations Manager, ensuring a positive relationship between donors and the organization.",
+        "pic": "/p5.jpeg"
     },
     {
-        "name": "Vivian Song",
-        "title": "Chief Operating Officer",
-        "about": "Vivian is a rising senior from Ontario who is passionate about computer science and financial literacy. She has worked with several non-profit organizations including Youth Insights and The Teen Trillionaire in the efforts of improving the accessibility of youth opportunities. In her free time she enjoys watching true crime documentaries, reading and programming.",
-        "pic": "/vivian.png"
-    },
-    {
-        "name": "Vivian Song",
-        "title": "Chief Operating Officer",
-        "about": "Vivian is a rising senior from Ontario who is passionate about computer science and financial literacy. She has worked with several non-profit organizations including Youth Insights and The Teen Trillionaire in the efforts of improving the accessibility of youth opportunities. In her free time she enjoys watching true crime documentaries, reading and programming.",
-        "pic": "/vivian.png"
-    },
-    {
-        "name": "Vivian Song",
-        "title": "Chief Operating Officer",
-        "about": "Vivian is a rising senior from Ontario who is passionate about computer science and financial literacy. She has worked with several non-profit organizations including Youth Insights and The Teen Trillionaire in the efforts of improving the accessibility of youth opportunities. In her free time she enjoys watching true crime documentaries, reading and programming.",
-        "pic": "/vivian.png"
+        "name": "Isaak Humphrey",
+        "title": "Content Developer",
+        "about": "Isaak has spent 5 years as a STEM educator in various high schools around the RTP area, teaching students innovations and design through hands-on activities. He currently develops material for our Common and Challenge builds, focusing on ease-of-learning and ensuring students can transfer the skills they have learned into their daily lives.",
+        "pic": "/p6.jpeg"
     }
 ]

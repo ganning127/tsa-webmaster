@@ -10,5 +10,17 @@
     {
         "question": "Is RoboReach selective?",
         "answer": "Since RoboReach's programs are all free of charge, we receive a lot of applications. We are selective in our selection process, but we are always open to new students!"
+    },
+    {
+        "question": "Which program should I apply to?",
+        "answer": "Depending on your previous experience, we offer 3 program options: common build, challenge build, and creative build. Those with no previous experience should apply for the common build program, while those with moderate to high experience can apply for either the challenge build (4-7) or creative build program (8-12). "
+    },
+    {
+        "question": "Should I choose academic year or summer?",
+        "answer": "Students in the summer program typically achieve more with their builds than those in the academic year program, because there is more time in the summer. However, if a student has a conflicting activity in the summer, we recommend that they apply for the academic year program."
+    },
+    {
+        "question": "How do your programs work?",
+        "answer": "Once your student is accepted into RoboReach, they are automatically paired with a mentor for their build. Afterward, the mentor will send information regarding specifics (video call link, goals of program, etc)."
     }
 ]
