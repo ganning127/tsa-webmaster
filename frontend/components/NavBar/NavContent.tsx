@@ -40,6 +40,11 @@ const MobileNavContext = (props: FlexProps) => {
 
   }, []);
 
+  const handleSignOut = () => {
+    localStorage.removeItem('token')
+    window.location.href = '/'
+  }
+
   const { isOpen, onToggle } = useDisclosure()
   return (
     <>
@@ -57,7 +62,22 @@ const MobileNavContext = (props: FlexProps) => {
             </Button>)}
           {
             email && (
-              <Text fontWeight='bold'>{email}</Text>
+
+              <Menu>
+                <MenuButton
+                  py={2}
+                  transition='all 0.2s'
+                  borderRadius='md'
+                  _hover={{ bg: 'gray.100' }}
+                  _focus={{ boxShadow: 'outline' }}
+                  fontWeight='bold'
+                >
+                  Welcome, <chakra.span color='green.dark'>{email}</chakra.span><ChevronDownIcon />
+                </MenuButton>
+                <MenuList>
+                  <MenuItem onClick={handleSignOut}>Log Out</MenuItem>
+                </MenuList>
+              </Menu>
             )
           }
         </Box>

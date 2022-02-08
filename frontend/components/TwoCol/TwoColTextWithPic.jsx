@@ -1,11 +1,11 @@
 import { SimpleGrid, Heading, Text, Box, Img, Button, chakra } from '@chakra-ui/react'
 
-export const TwoColTextWithPic = ({ pic, title, desc, align, buttonText, buttonLink, color, hoverColor, keyword, value }) => {
+export const TwoColTextWithPic = ({ pic, title, desc, align, buttonText, buttonLink, color, hoverColor, keyword, value, radius }) => {
     if (align === "right") {
         return (
             <SimpleGrid columns={{ base: 1, md: 2 }} spacing={20} mx="auto" textAlign={{ base: "center", md: "right" }} justifyContent="center" alignItems="center">
                 <Box mx="auto" d={{ base: 'none', md: 'block' }}>
-                    <Img src={pic} alt="pic" maxH="400px" />
+                    <Img src={pic} alt="pic" maxH="400px" rounded={radius} />
                 </Box>
                 <Box mx="auto" maxW="500px">
                     {title && <Heading color={color} fontWeight="bold">{title}</Heading>}
