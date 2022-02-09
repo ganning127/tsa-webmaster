@@ -145,40 +145,35 @@ export const Application = ({ }) => {
 
     const handleSubmit = async (event) => {
         event.preventDefault();
-        const firstname = document.getElementById('firstname').value;
-        const lastname = document.getElementById('lastname').value;
-        const buildProg = document.getElementById('buildProg').value;
-        const email = document.getElementById('email').value;
-        const age = document.getElementById('age').value;
-        const prog = document.getElementById('prog').value;
-        const school = document.getElementById('school').value;
-        const grade = document.getElementById('grade').value;
-        const gpa = document.getElementById('gpa').value;
-        const major = document.getElementById('major').value;
-        const transcript = document.getElementById('transcript').value;
-        const resume = document.getElementById('resume').value;
-        const whyJoinEssay = document.getElementById('whyJoinEssay').value;
-        const failureEssay = document.getElementById('failureEssay').value;
-        const interestsEssay = document.getElementById('interestsEssay').value;
-        const extraInfo = document.getElementById('extraInfo').value;
 
         const data = {
-            firstname,
-            lastname,
-            email,
-            age,
-            prog,
-            school,
-            grade,
-            gpa,
-            major,
-            transcript,
-            whyJoinEssay,
-            failureEssay,
-            interestsEssay,
-            extraInfo,
-            resume
+            firstname: '',
+            lastname: '',
+            email: '',
+            age: '',
+            prog: '',
+            school: '',
+            grade: '',
+            gpa: '',
+            major: '',
+            transcript: '',
+            whyJoinEssay: '',
+            failureEssay: '',
+            interestsEssay: '',
+            extraInfo: '',
+            resume: ''
         }
+
+        const response = await fetch('/api/saveApplication', {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'token': localStorage.getItem('token')
+            },
+            body: JSON.stringify(data)
+        })
+
+        setIsSubmitted(true);
 
     };
 
