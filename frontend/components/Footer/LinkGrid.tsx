@@ -7,22 +7,20 @@ export const LinkGrid = (props: SimpleGridProps) => (
     <Box minW="130px">
       <FooterHeading mb="4" color="text.dark">Navigate</FooterHeading>
       <Stack>
-        <Link>Home</Link>
-        <Link>About</Link>
-        <Link>Opportunities</Link>
-        <Link>Events</Link>
-        <Link>Discord</Link>
-        <Link>FAQ</Link>
+        <Link href='/'>Home</Link>
+        <Link href='/about'>About</Link>
+        <Link href='/about-roboreach-website'>About this Site</Link>
+        <Link href='/impact'>Impact</Link>
+
       </Stack>
     </Box>
     <Box minW="130px">
       <FooterHeading mb="4" color="text.dark">Resources</FooterHeading>
       <Stack>
-        <Link>Tutoring</Link>
-        <Link>Workshops</Link>
-        <Link>Sponsors</Link>
-        <Link>Privacy Policy</Link>
-        <Link>Terms of Service</Link>
+        <Link href='/faq'>FAQ</Link>
+        <Link href='builds'>Builds</Link>
+        <Link href='/apply'>Apply</Link>
+        <Link href='mailto:teamroboreach@gmail.com'>Say Hello!</Link>
       </Stack>
     </Box>
   </SimpleGrid>

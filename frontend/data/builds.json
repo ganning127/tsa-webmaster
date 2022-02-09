@@ -18,20 +18,30 @@
             {
                 "title": "Week 0",
                 "desc": "We’ll ship you your LEGO® MINDSTORMS® robot and all the tools you'll need for each week. This week will focus on knowing what you have and how to use each part!",
-                "pic": "/plan.png"
-            },
-            {
-                "title": "Weeks 1-3",
-                "desc": "Build your robot! We’ll walk through the instructions with you on not only how to build your robot but also in best practices!",
                 "pic": "/hammer.png"
             },
             {
-                "title": "Week 4-6",
-                "desc": "Program your robot! We’ll walk through how to write code in the EV3 language and how to use the EV3 software to control your robot! We'll have challenges for you to complete, and be sure to have fun along the way!",
+                "title": "Week 1",
+                "desc": "This is a week of introductions and to learn more about you! We want to see why you're are interested in robotics and what your plans are not only for this program but in the future as well.",
+                "pic": "/robointro.png"
+            },
+            {
+                "title": "Weeks 2-3",
+                "desc": "You will be guided through constructing a basic robot with a drive base, a mechanism, and two sensors. You will also wire their components and go through a basic boot sequence to ensure no faulty parts.",
+                "pic": "/buildStart.png"
+            },
+            {
+                "title": "Week 4",
+                "desc": "During this week, you will go over the basics of programming, learning loops, conditionals, operands, and algorithmic logic. We'll over instructions of coding the driving capabilities of the robot.",
                 "pic": "/code.png"
             },
             {
-                "title": "Week 7-8",
+                "title": "Weeks 5-6",
+                "desc": "You will explore coding the rest of the robot and learn how to code with given input through programming the sensors. You're encouraged to be creative and are supported and guided by our mentors to create cool functions for their robot!",
+                "pic": "/designs.png"
+            },
+            {
+                "title": "Weeks 7-8",
                 "desc": "During the final two weeks, you'll have the chance to present your robot to friends and family to receive feedback! We'll walk through how to implement the changes, if you agree to them, onto your robot!",
                 "pic": "/reviews.png"
             }
@@ -61,26 +71,31 @@
         "weeks": [
             {
                 "title": "Week 0",
-                "desc": "We’ll ship you all the materials you need for the first week’s lesson. This week will focus on knowing what you have and how to use each part!",
+                "desc": "We will ship you a kit of parts and tools for you to build your robot with! This week will focus on knowing what you have and how to use each part!",
                 "pic": "/plan.png"
             },
             {
-                "title": "Week 1-3",
-                "desc": "Build the drivetrain! We’ll walk through the instructions with you on not only how to build your robot but also in best practices!",
+                "title": "Week 1",
+                "desc": "During week 1, we will go over what is in the kit and how to properly use all of it safely! In order to demonstrate how everything works, you will choose one of three drivetrain designs we have prepared to build. This part will serve as your base throughout the week.",
                 "pic": "/drivetrain.png"
             },
             {
-                "title": "Week 3-5",
-                "desc": "Add the functionality of the robot! Whether it be arms, claws, or any other part, we’ll walk through how to build it!",
+                "title": "Weeks 2-3",
+                "desc": "During this week, you will choose one out of ten different mechanisms to add to their robot. this lets you create a unique and personal robot with functionality!",
                 "pic": "/arm.png"
             },
             {
-                "title": "Week 6-7",
-                "desc": "Program your robot! We’ll walk through how to write code to move the robot the way you’d like.",
+                "title": "Week 4",
+                "desc": "During this week, we will go over basic electrical principles such as voltage, current and resistance. Here, you will also learn how to wire the robot. ",
+                "pic": "/elec.png"
+            },
+            {
+                "title": "Weeks 5-6",
+                "desc": "You will first be taught basic java and learn to program functionality into the drivebase mechanism. afterwards, you will integrate more complex coding principles into their robot such as control theory!",
                 "pic": "/code.png"
             },
             {
-                "title": "Week 8",
+                "title": "Week 7-8",
                 "desc": "During the final two weeks, you'll present your robot to our lead mentors, Sammy and Alex. They'll provide feedback on how you can improve your robot before you show it to your parents!",
                 "pic": "/reviews.png"
             }
