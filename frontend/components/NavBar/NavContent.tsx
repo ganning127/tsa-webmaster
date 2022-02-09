@@ -71,8 +71,7 @@ const MobileNavContext = (props: FlexProps) => {
                   _hover={{ bg: 'gray.100' }}
                   _focus={{ boxShadow: 'outline' }}
                   fontWeight='bold'
-                >
-                  Welcome, <chakra.span color='green.dark'>{email}</chakra.span><ChevronDownIcon />
+                ><chakra.span color='green.dark'>{email}</chakra.span><ChevronDownIcon />
                 </MenuButton>
                 <MenuList>
                   <MenuItem onClick={handleSignOut}>Log Out</MenuItem>
