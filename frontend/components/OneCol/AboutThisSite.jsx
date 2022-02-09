@@ -1,4 +1,4 @@
-import { Text, Heading, Box, SimpleGrid, Link } from "@chakra-ui/react";
+import { Text, Heading, Box, SimpleGrid, Link, chakra } from "@chakra-ui/react";
 import { HeadingWithDesc } from "../Headings/HeadingWithDesc";
 import { MedSep } from "../Separators/MedSep";
 import Langs from '../../data/code.json'
@@ -13,13 +13,13 @@ export const AboutThisSite = () => {
                 <Text fontSize='xl'>RoboReach's website was created by Ganning Xu, Jacob Van Meter, Daniel Zhang, and Allison Zhang for the 2022 TSA conference</Text>
 
                 <Box mt="4">
-                    <Text fontSize='lg'>Plan of work: <Link href='/plan-of-work.pdf' color='blue.light' isExternal>Log</Link></Text>
-                    <Text fontSize='lg'>GitHub Repository: <Link href='https://github.com/ganning127/tsa-webmaster' color='blue.light' isExternal>Repo</Link></Text>
+                    <Text fontSize='lg'><chakra.span fontWeight='bold'>Plan of work</chakra.span>: <Link href='/plan-of-work.pdf' color='blue.light' isExternal>PDF Log</Link></Text>
+                    <Text fontSize='lg'><chakra.span fontWeight='bold'>GitHub Repository</chakra.span>: <Link href='https://github.com/ganning127/tsa-webmaster' color='blue.light' isExternal>Code Repo</Link></Text>
                 </Box>
 
                 <MedSep />
 
-                <HeadingWithDesc>Utlitliized Tools</HeadingWithDesc>
+                <HeadingWithDesc>Utilized Tools</HeadingWithDesc>
                 <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} mt="4">
                     {Langs.languages.map((lang, index) => (
                         <Box key={index} shadow='lg' rounded='md' p={4}>

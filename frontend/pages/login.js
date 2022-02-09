@@ -2,10 +2,27 @@ import Head from 'next/head'
 import { NavBar } from '../components/NavBar/index.tsx'
 import { Footer } from '../components/Footer/index.tsx'
 import { LeftTextWithButton } from '../components/TwoCol/LeftTextWithButton'
-import { Container, Box, Heading, VStack, Text, Button, SimpleGrid, Img, Input, FormControl, Link } from '@chakra-ui/react'
+import {
+    Container, Box, Heading, VStack, Text, Button, SimpleGrid, Img, Input, FormControl, Link, Alert,
+    AlertIcon,
+    AlertTitle,
+    AlertDescription,
+} from '@chakra-ui/react'
 import { Spinner } from '@chakra-ui/react'
 import { Formik, Form } from 'formik';
+import { useEffect, useState } from 'react'
 export default function Home() {
+
+    const [msg, setMsg] = useState('')
+
+    useEffect(() => {
+        const queryString = window.location.search;
+        const urlParams = new URLSearchParams(queryString);
+        const message = urlParams.get('msg');
+        setMsg(message)
+    })
+
+
     const handleSubmit = async (event) => {
         event.preventDefault();
         document.getElementById('spinner').style.display = 'block';
@@ -79,6 +96,10 @@ export default function Home() {
                                         maxW="400px"
                                         mx="auto"
                                     >
+                                        {msg && <Alert status='warning' rounded='md'>
+                                            <AlertIcon />
+                                            <AlertTitle>{msg}</AlertTitle>
+                                        </Alert>}
                                         <Box>
                                             <Text fontSize='md' mb="0">Welcome back</Text>
                                             <Text fontWeight="bold" fontSize='3xl' color='blue.dark'>Student Login</Text>

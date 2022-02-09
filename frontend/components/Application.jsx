@@ -3,7 +3,7 @@ import {
     Text,
     SimpleGrid,
     Input,
-    Img,
+    useToast,
     Link,
     FormLabel,
     VStack,
@@ -17,6 +17,10 @@ import {
     NumberInputStepper,
     NumberIncrementStepper,
     NumberDecrementStepper,
+    Alert,
+    AlertIcon,
+    AlertTitle,
+    AlertDescription,
 } from '@chakra-ui/react'
 import { HeadingWithDesc } from './Headings/HeadingWithDesc';
 import { MedHeading } from './Headings/MedHeading';
@@ -26,6 +30,7 @@ import { useState, useEffect } from 'react'
 export const Application = ({ }) => {
     const [email, setEmail] = useState('')
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const toast = useToast()
 
     useEffect(async () => {
         const response = await fetch('/api/getApplication', {
@@ -39,11 +44,19 @@ export const Application = ({ }) => {
         const application = data.application;
         console.log(data);
         if (!application.firstname || !document.getElementById('firstname')) {
+            toast({
+                title: 'Could not find an application, start a new one!',
+                description: "Either you've never started an application, or there was a bug in our system.",
+                status: 'info',
+                duration: 4000,
+                isClosable: true,
+            })
             return;
         }
 
 
         document.getElementById('firstname').value = application.firstname;
+        document.getElementById('buildProg').value = application.buildProg;
         document.getElementById('lastname').value = application.lastname;
         document.getElementById('email').value = application.email;
         document.getElementById('age').value = application.age;
@@ -59,13 +72,20 @@ export const Application = ({ }) => {
         document.getElementById('interestsEssay').value = application.interestsEssay;
         document.getElementById('extraInfo').value = application.extraInfo;
 
-
+        toast({
+            title: "Application loaded!",
+            description: "We've saved your progress from from the last time you saved your application.",
+            status: 'success',
+            duration: 4000,
+            isClosable: true,
+        })
     }, [])
 
     const handleSave = async (event) => {
         event.preventDefault();
         const firstname = document.getElementById('firstname').value;
         const lastname = document.getElementById('lastname').value;
+        const buildProg = document.getElementById('buildProg').value;
         const email = document.getElementById('email').value;
         const age = document.getElementById('age').value;
         const prog = document.getElementById('prog').value;
@@ -87,6 +107,7 @@ export const Application = ({ }) => {
             age,
             prog,
             school,
+            buildProg,
             grade,
             gpa,
             major,
@@ -108,8 +129,16 @@ export const Application = ({ }) => {
 
         const data2 = await response.json();
         if (!data2.error) {
-            document.getElementById('saveMsg').style.display = 'block';
+            toast({
+                title: 'Application saved',
+                description: "Your application has been saved in our database! It will autoload next time you visit this page.",
+                status: 'info',
+                duration: 4000,
+                isClosable: true,
+            })
         }
+
+
 
 
     }
@@ -118,6 +147,7 @@ export const Application = ({ }) => {
         event.preventDefault();
         const firstname = document.getElementById('firstname').value;
         const lastname = document.getElementById('lastname').value;
+        const buildProg = document.getElementById('buildProg').value;
         const email = document.getElementById('email').value;
         const age = document.getElementById('age').value;
         const prog = document.getElementById('prog').value;
@@ -149,8 +179,6 @@ export const Application = ({ }) => {
             extraInfo,
             resume
         }
-
-        setIsSubmitted(true);
 
     };
 
@@ -206,16 +234,28 @@ export const Application = ({ }) => {
                                             <Input id='email' type="text" placeholder='e.g. example@gmail.com' color="gray.900" />
                                         </FormControl>
 
+                                        <FormControl isRequired borderRadius="20" color="gray.900" mx='auto'>
+                                            <FormLabel htmlFor='prog' color="blue.dark">Program Time you're applying to</FormLabel>
+                                            <Select id='prog' color='text.dark'>
+                                                <option value="academicYearFallProg">Academic Year Fall (2022, Sep 19 - Nov 18)</option>
+                                                <option value="academicYearSpringProg">Academic Year Spring (2023, Jan 23 - Mar 24)</option>
+                                                <option value="summerProg">Summer (2023, Jun 26 - Aug 25)</option>
+                                            </Select>
+                                        </FormControl>
+
+                                        <FormControl isRequired borderRadius="20" color="gray.900" mx='auto'>
+                                            <FormLabel htmlFor='buildProg' color="blue.dark">Build you're applying to</FormLabel>
+                                            <Select id='buildProg' color='text.dark'>
+                                                <option value="commonBuild">Common Build</option>
+                                                <option value="challengeBuild">Challenge Build (not offered in academic fall)</option>
+                                                <option value="creativeBuild">Creative Build (not offered in academic spring)</option>
+                                            </Select>
+                                        </FormControl>
+
                                     </SimpleGrid>
 
-                                    <FormControl isRequired borderRadius="20" color="gray.900" mt={5} maxW='800px' mx='auto'>
-                                        <FormLabel htmlFor='school' color="blue.dark">Program you're applying to</FormLabel>
-                                        <Select id='prog' color='text.dark'>
-                                            <option value="academicYearFallProg">Academic Year Fall (2022, Sep 19 - Nov 18)</option>
-                                            <option value="academicYearSpringProg">Academic Year Spring (2023, Jan 23 - Mar 24)</option>
-                                            <option value="summerProg">Summer (2023, Jun 26 - Aug 25)</option>
-                                        </Select>
-                                    </FormControl>
+
+
                                 </Box>
                             </Fade>
 
@@ -269,17 +309,17 @@ export const Application = ({ }) => {
                                     <SimpleGrid columns={1} spacing={5} mt="4">
                                         <FormControl isRequired borderRadius="20" color="gray.900">
                                             <FormLabel htmlFor='whyJoinEssay' color="blue.dark">Why do you want to join RoboReach&apos;s program? (300 words max)</FormLabel>
-                                            <Textarea id='whyJoinEssay' type="text" placeholder='e.g. https://docs.google.com' color="gray.900" rows={15} />
+                                            <Textarea id='whyJoinEssay' type="text" placeholder='Type here' color="gray.900" rows={15} />
                                         </FormControl>
 
                                         <FormControl isRequired borderRadius="20" color="gray.900">
                                             <FormLabel htmlFor='interestsEssay' color="blue.dark">Describe your interests in STEM (300 words max)</FormLabel>
-                                            <Textarea id='interestsEssay' type="text" placeholder='e.g. https://docs.google.com' color="gray.900" rows={15} />
+                                            <Textarea id='interestsEssay' type="text" placeholder='e.g. Type here' color="gray.900" rows={15} />
                                         </FormControl>
 
                                         <FormControl isRequired borderRadius="20" color="gray.900">
                                             <FormLabel htmlFor='failureEssay' color="blue.dark">Describe how you respond to failure (300 words max)</FormLabel>
-                                            <Textarea id='failureEssay' type="text" placeholder='e.g. https://docs.google.com' color="gray.900" rows={15} />
+                                            <Textarea id='failureEssay' type="text" placeholder='Type here' color="gray.900" rows={15} />
                                         </FormControl>
 
                                     </SimpleGrid>
@@ -299,7 +339,7 @@ export const Application = ({ }) => {
                                     <MedHeading desc="Let us know anything else you want here!">Additional Information</MedHeading>
                                     <FormControl isRequired borderRadius="20" color="gray.900">
                                         <FormLabel htmlFor='extraInfo' color="blue.dark">A chance to talk about anything that you haven&apos;t already!</FormLabel>
-                                        <Textarea id='extraInfo' type="text" placeholder='e.g. https://docs.google.com' color="gray.900" rows={15} />
+                                        <Textarea id='extraInfo' type="text" placeholder='Type here' color="gray.900" rows={15} />
                                     </FormControl>
                                 </Box>
                             </Fade>
@@ -323,7 +363,25 @@ export const Application = ({ }) => {
                     </Form>
                 </Formik>}
 
-                {isSubmitted && <Text bg='blue.light' color='white' p='1' rounded='lg' fontSize="xl">We have received for your application! We will get back to you as soon as possible!</Text>}
+                {isSubmitted && (
+                    <Alert
+                        status='success'
+                        variant='subtle'
+                        flexDirection='column'
+                        alignItems='center'
+                        justifyContent='center'
+                        textAlign='center'
+                        height='200px'
+                    >
+                        <AlertIcon boxSize='40px' mr={0} />
+                        <AlertTitle mt={4} mb={1} fontSize='lg'>
+                            Application submitted!
+                        </AlertTitle>
+                        <AlertDescription maxWidth='sm'>
+                            Thanks for submitting your application. Our team will get back to you soon.
+                        </AlertDescription>
+                    </Alert>
+                )}
             </Box>
 
         </>

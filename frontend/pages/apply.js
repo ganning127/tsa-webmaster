@@ -23,7 +23,7 @@ export default function Apply() {
         }
         else {
             setEmail('')
-            window.location.href = '/login'
+            window.location.href = '/login?msg=Please login to apply for our programs!'
         }
         // console.log();
 
@@ -58,7 +58,7 @@ export default function Apply() {
                                 If you are in 7th grade or under...
                             </Heading>
                             <Text fontSize='xl'>
-                                Great news! You don't need to fill out this application! Have a parent or guardian send an email to <Link href='mailto:teamroboreach@gmail.com'>roboreach@gmail.com</Link> to apply!
+                                Great news! You don't need to fill out this application! Have a parent or guardian send an email to <Link href='mailto:teamroboreach@gmail.com' color='blue.light'>teamroboreach@gmail.com</Link> to apply!
                             </Text>
 
                         </Box>

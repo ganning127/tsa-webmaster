@@ -34,7 +34,7 @@ const DesktopSubmenu = (props: SubmenuProps) => {
         <Box maxW="7xl" mx="auto" px="8">
           <SimpleGrid spacing="10" columns={2}>
             {link.children?.map((item, idx) => (
-              <DesktopMenuItem key={idx} title={item.label} href={item.href} icon={item.icon} color="text.dark">
+              <DesktopMenuItem key={idx} title={item.label} href={item.href} icon={item.icon} color="text.dark" _focus={{}} _active={{}}>
                 {item.description}
               </DesktopMenuItem>
             ))}
