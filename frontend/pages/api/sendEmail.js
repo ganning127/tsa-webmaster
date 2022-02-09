@@ -17,7 +17,7 @@ export default async function handler(req, res) {
     let info = await transporter.sendMail({
         to: toEmail, // list of receivers
         subject: request["subject"], // Subject line
-        text: request["message"], // plain text body
+        text: 'We have received your message: ' + request["message"], // plain text body
     });
 
 

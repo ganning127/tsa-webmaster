@@ -8,6 +8,7 @@ import {
     StackDivider,
     Textarea,
     Button,
+    Spinner,
     Box,
 } from '@chakra-ui/react'
 import { HeadingWithDesc } from '../Headings/HeadingWithDesc';
@@ -18,9 +19,11 @@ import { useState } from 'react';
 export const Contact = (props) => {
 
     const [isSubmitted, setIsSubmitted] = useState(false);
+    const [isLoading, setIsLoading] = useState(false);
 
     const handleSubmit = async (event) => {
         event.preventDefault();
+        setIsLoading(true);
         let name = document.getElementById('name').value;
         let email = document.getElementById('email').value;
         let message = document.getElementById('message').value;
@@ -48,6 +51,7 @@ export const Contact = (props) => {
             }
 
         }
+        setIsLoading(false);
 
     };
 
@@ -89,7 +93,9 @@ export const Contact = (props) => {
                                     <Textarea placeholder='Message' rows="5" id="message" />
                                 </FormControl>
 
-                                <Button color="white" bg="blue.light" _hover={{ bg: "blue.dark" }} type="submit">Submit</Button>
+                                <Button color="white" bg="blue.light" _hover={{ bg: "blue.dark" }} type="submit">
+                                    {isLoading && <Spinner mr='2' />}
+                                    Submit</Button>
                             </VStack>
                             <Text bg='red.100' mt='4' p='1' rounded='lg' d='none' id='error'>There was an error, please refresh the page and try again!</Text>
                         </Form>
