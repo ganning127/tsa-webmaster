@@ -17,18 +17,23 @@
         "weeks": [
             {
                 "title": "Week 0",
-                "desc": "We’ll ship you all the materials you need for the first week’s lesson. This week will focus on knowing what you have and how to use each part!",
+                "desc": "We’ll ship you your LEGO® MINDSTORMS® robot and all the tools you'll need for each week. This week will focus on knowing what you have and how to use each part!",
                 "pic": "/plan.png"
             },
             {
-                "title": "Weeks 1-4",
+                "title": "Weeks 1-3",
                 "desc": "Build your robot! We’ll walk through the instructions with you on not only how to build your robot but also in best practices!",
                 "pic": "/hammer.png"
             },
             {
-                "title": "Week 5-8",
-                "desc": "Program your robot! We’ll walk through how to write code to move the robot the way you’d like.",
+                "title": "Week 4-6",
+                "desc": "Program your robot! We’ll walk through how to write code in the EV3 language and how to use the EV3 software to control your robot! We'll have challenges for you to complete, and be sure to have fun along the way!",
                 "pic": "/code.png"
+            },
+            {
+                "title": "Week 7-8",
+                "desc": "During the final two weeks, you'll have the chance to present your robot to friends and family to receive feedback! We'll walk through how to implement the changes, if you agree to them, onto your robot!",
+                "pic": "/reviews.png"
             }
         ],
         "head4": "Requirements",
@@ -70,9 +75,14 @@
                 "pic": "/arm.png"
             },
             {
-                "title": "Week 5-8",
+                "title": "Week 6-7",
                 "desc": "Program your robot! We’ll walk through how to write code to move the robot the way you’d like.",
                 "pic": "/code.png"
+            },
+            {
+                "title": "Week 8",
+                "desc": "During the final two weeks, you'll present your robot to our lead mentors, Sammy and Alex. They'll provide feedback on how you can improve your robot before you show it to your parents!",
+                "pic": "/reviews.png"
             }
         ],
         "head4": "Requirements",

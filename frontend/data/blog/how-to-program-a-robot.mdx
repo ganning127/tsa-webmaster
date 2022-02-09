@@ -1,0 +1,16 @@
+---
+title: 'How to Program a Robot'
+publishedAt: '2022-02-09'
+summary: "Learn how to program a robot with Jacob!"
+author: 'Jacob Van Meter'
+image: 'https://i.imgur.com/FRkp1Ln.jpg'
+---
+
+## Part 1: Defining what you need
+The first important step to programming a robot is determining what you need the robot you are programming to do. You should clearly define what components of software you need to be able to operate the required parts of the robot. Then for each component, you should define what inputs you need, such as sensors, and what outputs you need, such as motor speed. For a concrete example, imagine you are in charge of programming a robot to follow a GPS path. You would probably first outline a drivetrain component, to encapsulate the functionality of the drivetrain, and then outline a GPS drive component, that would control the drivetrain based on GPS inputs. Then, to define the inputs and outputs of each component, you would first do the drivetrain component, in which the inputs would probably be desired motor speeds, and the output would be setting the motor power. For the GPS drive, the input would be the GPS sensor information, and the output would be desired motor outputs to follow the desired path.
+
+## Part 2: Figuring out the details of what you’re working with
+The next step is to find out all the nitty gritty details of the hardware you’re working with. For example, if you’re working with motors, you need to find out the procedures for properly configuring the motors for your use case, and you would probably need to figure out what types of units are being used when controlling the motors. Then you should write some basic low level code to accomplish basic functionality. For example, if you were programming GPS pathing, you might do this step by figuring out how to write a function that can read a GPS position, and calculate the angle that the robot needs to turn towards in order to proceed towards the desired GPS position.
+
+## Part 3: Pulling it all together
+The last step to programming a robot is to pull it all together by connecting all the higher level components, and making sure that they play well together. For example, if you had a working GPS path component and a working drivetrain component, you would need to connect them together by feeding the outputted motor speeds from the GPS path component into the motor inputs of the drivetrain component. Once you complete this process by connecting all of these high level components, and they work correctly in unison, you have finished programming your robot!

@@ -16,7 +16,6 @@ import { Contact } from '../components/TwoCol/Contact'
 import { MedSepNoLine } from '../components/Separators/MedSepNoLine'
 import Fade from 'react-reveal/Fade';
 import { HowItWorks } from '../components/HowItWorks'
-import { useEffect } from "react";
 
 export default function Home() {
 

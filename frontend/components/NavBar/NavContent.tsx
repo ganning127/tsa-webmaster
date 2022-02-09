@@ -112,7 +112,6 @@ const DesktopNavContent = (props: any) => {
     window.location.href = '/'
   }
 
-  console.log(email)
   return (
     <Flex className="nav-content__desktop" align="center" justify="space-between" {...props}>
       <Box as="a" href="/" rel="home">
@@ -132,7 +131,7 @@ const DesktopNavContent = (props: any) => {
       </HStack>
       <HStack spacing="8" minW="100px" justify="space-between">
         {!email && (
-          <Button bg="green.dark" _hover={{ bg: "green.dark.hover" }} color="white" as="a" href="/login" borderRadius="20" shadow="lg">
+          <Button bg="green.dark" _hover={{ bg: "green.dark.hover" }} color="white" as="a" href="/login" borderRadius="full" shadow="lg">
             Sign In
           </Button>)}
         {

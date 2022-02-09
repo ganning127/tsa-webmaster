@@ -17,7 +17,7 @@ export const BlogCard = ({ title, image, link, desc, isExternal, isTrunc, slug }
     }
 
     const bgColors = {
-        light: '#f0f0f0',
+        light: '#f7f7f7',
         dark: '#363636'
     }
     return (

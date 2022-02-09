@@ -4,8 +4,6 @@ import { Footer } from '../components/Footer/index.tsx'
 import { Container } from '@chakra-ui/react'
 import { MedSep } from '../components/Separators/MedSep'
 import Fade from 'react-reveal/Fade';
-import Data from '../data/faq.json'
-// import { CollapseData } from '../components/OneCol/CollapseData'
 import { AboutThisSite } from '../components/OneCol/AboutThisSite'
 import { OnlyTextWithButton } from '../components/Landing/OnlyTextWithButton'
 import { MedSepNoLine } from '../components/Separators/MedSepNoLine'

@@ -22,16 +22,16 @@ export const links: Link[] = [
     label: 'About',
     children: [
       {
-        label: 'About RoboReach',
-        description: 'Learn about our mission, our vision, and our team.',
-        href: '/about',
-        icon: <BsFillInfoCircleFill />
-      },
-      {
         label: "About RoboReach's Website",
         description: "How we coded this website and it's functionality!",
         href: '/about-roboreach-website',
         icon: <BiCodeAlt />
+      },
+      {
+        label: 'About RoboReach',
+        description: 'Learn about our mission, our vision, and our team.',
+        href: '/about',
+        icon: <BsFillInfoCircleFill />
       }
     ]
   },

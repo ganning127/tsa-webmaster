@@ -103,7 +103,7 @@ export default function BlogLayout({ children, frontMatter }) {
                                 w="100%"
                             >
                                 <Heading as="h1" color={titleColors[colorMode]} fontWeight="bold" fontSize={{ base: '2xl', md: '5xl' }}>{frontMatter.title}</Heading>
-                                <Img src={frontMatter.image} borderRadius="10" my="8" />
+                                <Img src={frontMatter.image} borderRadius="10" my="8" maxH='xl' objectFit='cover' />
                                 <Flex color={descColors[colorMode]}>
                                     <Box >
                                         <Text fontWeight="semibold" fontSize="xl">{frontMatter.readingTime.text}</Text>
