@@ -20,7 +20,7 @@ export const TwoColWithPic = ({ title, desc, button1, link1, button2, link2, pic
                     </Box>
 
                     <Box d={{ base: 'block', lg: 'none' }}>
-                        <Img src={pic} mx="auto" rounded={radius} />
+                        <Img src={pic} mx="auto" rounded={radius} objectFit='cover' maxH='md' />
                     </Box>
 
                 </SimpleGrid>
@@ -44,11 +44,11 @@ export const TwoColWithPic = ({ title, desc, button1, link1, button2, link2, pic
                         </HStack>
                     </Box>
                     <Box d={{ base: 'none', lg: 'block' }}>
-                        <Img src={pic} mx="auto" rounded={radius} />
+                        <Img src={pic} mx="auto" rounded={radius} objectFit='cover' maxH='md' />
                     </Box>
 
                     <Box d={{ base: 'block', lg: 'none' }}>
-                        <Img src={pic} mx="auto" rounded={radius} />
+                        <Img src={pic} mx="auto" rounded={radius} objectFit='cover' maxH='md' />
                     </Box>
 
                 </SimpleGrid>

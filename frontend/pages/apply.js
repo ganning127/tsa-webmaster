@@ -43,7 +43,7 @@ export default function Apply() {
             <Container maxW="container.xl" mt="8">
                 <Fade>
                     <TwoColWithPic
-                        pic='/temp_apply.jpeg'
+                        pic='/temp_app.jpeg'
                         title="Apply Now"
                         desc="RoboReach is a non-profit organization that uses robotics to build the leaders of tomorrow. We are building a community of young people who are passionate about building a better future for themselves and their communities."
                         button1="Learn More"

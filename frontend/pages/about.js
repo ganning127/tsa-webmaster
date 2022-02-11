@@ -28,7 +28,7 @@ export default function Home() {
             <Container maxW="container.xl" mt="8">
                 <Fade>
                     <TwoColWithPic
-                        pic='/about.jpg'
+                        pic='/about.jpeg'
                         title="About Us"
                         desc="RoboReach is a non-profit organization that uses robotics to build the leaders of tomorrow. We are fostering a community of youth who are passionate about creating a better future for themselves and their communities."
                         button1="Learn More"
@@ -46,7 +46,7 @@ export default function Home() {
                         "
                         buttonText="Learn More"
                         buttonLink="/about"
-                        pic="/hand.png"
+                        pic="/hand.jpeg"
                         radius="md"
                         align='right'
                         color='blue.light'

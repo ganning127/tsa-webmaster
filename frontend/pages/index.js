@@ -113,12 +113,6 @@ export default function Home() {
           <Testimonials />
 
           <MedSep />
-          <HeadingWithDesc>Sponsors</HeadingWithDesc>
-          <TwoColPics
-            data={Sponsors}
-          />
-
-          <MedSep />
           <Contact />
 
           <MedSepNoLine />
