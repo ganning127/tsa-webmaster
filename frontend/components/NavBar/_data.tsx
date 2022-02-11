@@ -57,7 +57,7 @@ export const links: Link[] = [
     children: [
       {
         label: 'Apply Now',
-        description: 'Join a team of talented developers, designers, and project managers.',
+        description: 'Join one of our 3 builds!',
         href: '/apply',
         icon: <FaRobot />,
       },
