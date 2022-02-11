@@ -15,7 +15,7 @@ export const AboutThisSite = () => {
 
                 <Box mt="4">
                     <Text fontSize='lg'><chakra.span fontWeight='bold'>Plan of work</chakra.span>: <Link href='/plan-of-work.pdf' color='blue.light' isExternal>PDF Log</Link></Text>
-                    <Text fontSize='lg'><chakra.span fontWeight='bold'>Copyright Release Form</chakra.span>: <Link href='/copyright-checklist.pdf' color='blue.light'>PDF Form</Link></Text>
+                    <Text fontSize='lg'><chakra.span fontWeight='bold'>Copyright Release Form</chakra.span>: <Link href='/copyright-checklist.pdf' color='blue.light' isExternal>PDF Form</Link></Text>
                     <Text fontSize='lg'><chakra.span fontWeight='bold'>GitHub Repository</chakra.span>: <Link href='https://github.com/ganning127/tsa-webmaster' color='blue.light' isExternal>Code Repo</Link></Text>
 
                 </Box>
