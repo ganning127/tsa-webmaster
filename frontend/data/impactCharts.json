@@ -6,22 +6,30 @@
         "data": {
             "labels": [
                 "White",
-                "African American",
+                "Black/African American",
                 "Asian",
-                "Alaska Native"
+                "American Indian/Alaska Native",
+                "Hispanic/Latino",
+                "Native Hawaiian/Pacific Islander"
             ],
             "datasets": [
                 {
                     "label": "# of Votes",
                     "data": [
-                        12,
-                        19,
-                        4
+                        83,
+                        90,
+                        73,
+                        67,
+                        103,
+                        100
                     ],
                     "backgroundColor": [
                         "#3D7B79",
                         "#335068",
-                        "#6388B4"
+                        "#6388B4",
+                        "#BFC0C0",
+                        "#F2F2F2",
+                        "#c3e0f7"
                     ]
                 }
             ]
@@ -40,8 +48,8 @@
                 {
                     "label": "# of Votes",
                     "data": [
-                        499,
-                        1
+                        514,
+                        2
                     ],
                     "backgroundColor": [
                         "#3D7B79",
@@ -65,9 +73,9 @@
                 {
                     "label": "# of Votes",
                     "data": [
-                        499,
-                        789,
-                        1000
+                        142,
+                        210,
+                        164
                     ],
                     "backgroundColor": [
                         "#6388B4",

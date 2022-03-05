@@ -10,7 +10,6 @@ import Fade from 'react-reveal/Fade';
 import { FullTabs } from '../components/FullPage/FullTabs'
 import { ProgramComparison } from '../components/TwoCol/ProgramComparison'
 import Data from '../data/builds.json'
-
 export default function Builds({ posts }) {
     return (
         <>
