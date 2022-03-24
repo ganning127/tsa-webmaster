@@ -2,7 +2,7 @@
     {
         "title": "Races",
         "type": "pie",
-        "desc": "Under strict rules and limited time and resources, teams of high school students are challenged to build industrial-size robots to play a difficult field game.",
+        "desc": "Race is not a factor in the admission process; we strive to serve all students excited by STEM and robotics, no matter who they are or where they come from. We encourage students from all backgrounds to apply to RoboReach.",
         "data": {
             "labels": [
                 "White",
@@ -38,7 +38,7 @@
     {
         "title": "Satisfied",
         "type": "pie",
-        "desc": "Under strict rules and limited time and resources, teams of high school students are challenged to build industrial-size robots to play a difficult field game.",
+        "desc": "With a large team of highly educated and enthusiastic mentors, along with well structued programs designed to fit students' needs, RoboReach truly is a positive experience for everyone involved.",
         "data": {
             "labels": [
                 "Satisfied",
@@ -62,7 +62,7 @@
     {
         "title": "Most Popular Programs",
         "type": "polarArea",
-        "desc": "Under strict rules and limited time and resources, teams of high school students are challenged to build industrial-size robots to play a difficult field game.",
+        "desc": "While all of the programs support many students each year, the Creative Build is the most popular of the three. Students enjoy the freedom they have in designed a robot unique to them!",
         "data": {
             "labels": [
                 "Common Build",

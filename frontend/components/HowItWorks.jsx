@@ -14,7 +14,7 @@ export const HowItWorks = () => {
                 How does RoboReach work?
             </Heading>
             <Text as="p" fontSize="2xl" mt="4">
-                RoboReach is a free and virtual mentorship program in which students learn to build both robots and their leadership skills. We offer three programs: common build, challenge build, and creative build. Each build is targeted towards a different age group and skill level. Here's how the process works:
+                RoboReach is a free and virtual mentorship program in which students learn to build both robots and their leadership skills. We offer three programs: Common Build, Challenge Build, and Creative Build. Each program is targeted towards a different age group and will tackle topics that will challenge students. Here's how the process works:
             </Text>
 
             <OrderedList fontSize='2xl' my={4}>

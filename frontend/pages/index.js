@@ -67,7 +67,7 @@ export default function Home() {
           <TwoColTextWithPic
             pic='/common_build.png'
             title="Common Build"
-            desc="Students are led step-by-step through the process of building a basic LEGO® MINDSTORMS® robot  to introduce fundamental principles and concepts. Instructors will guide groups of students through live-sessions in order to ensure full participation and mastery of the concepts.  "
+            desc="Students are led step-by-step through the process of building a basic LEGO® MINDSTORMS® robot to introduce the fundamental principles and concepts of robotics. Instructors will guide groups of students through live-sessions in order to ensure full participation and mastery of the concepts.  "
             align="left"
             keyword="Grades"
             value="K-3"
@@ -81,7 +81,7 @@ export default function Home() {
           <TwoColTextWithPic
             pic='/challenge_build.png'
             title="Challenge Build"
-            desc="Students are given tasks that the robot should be able to complete, designing and building the robot from a variety of available parts. Instructors will guide students through each step of the process through live chat and video. "
+            desc="While students will still have help from mentors every step of the way, they will have more freedom in the design of their robots. Students are given tasks that the robot should be able to complete, designing and building the robot from a variety of available parts. Mentors will be available to students through live chat and video. "
             align="right"
             buttonText="Read More"
             buttonLink="/builds"
@@ -96,7 +96,7 @@ export default function Home() {
           <TwoColTextWithPic
             pic='/creative_build.png'
             title="Creative Build"
-            desc="Each student will design and create a unique build that addresses a problem they decide on. Students will be matched with a mentor who will guide them through the entire process, helping them decide on materials, a design, and the building process"
+            desc="Each student will design and create a unique build to perform a series of tasks of their choosing. Students will be matched with a mentor who will guide them through the entire process, helping them decide on materials, a design, and the building process"
             align="left"
             keyword="Grades"
             value="8-12"
