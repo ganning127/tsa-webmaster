@@ -26,9 +26,7 @@ export default function AboutRoboReachWebsites({ posts }) {
                         title="About Roboreach&apos;s Website"
                         desc="Learn about the languages and frameworks used to build our website."
                     />
-
                     <MedSep />
-
                     <AboutThisSite />
                     <MedSepNoLine />
                 </Fade>

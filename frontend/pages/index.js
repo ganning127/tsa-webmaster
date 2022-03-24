@@ -108,7 +108,7 @@ export default function Home() {
           <MedSep />
 
           <HeadingWithDesc
-            desc="Hear what our students have to say."
+            desc="Hear what parents and our students have to say."
           >Testimonials</HeadingWithDesc>
           <Testimonials />
 

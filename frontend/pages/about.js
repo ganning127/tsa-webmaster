@@ -42,7 +42,7 @@ export default function Home() {
 
                     <TwoColTextWithPic
                         title="Our Mission"
-                        desc="For no cost, underprivileged students around the nation are provided with remote STEM opportunities focused in robotics. In these programs, students not only gain a strong understanding of the fundamentals of robotics, but also develop crucial soft skills and practicies that will give them an academic and professional edge later in their lives. 
+                        desc="For no cost, underprivileged students around the nation are provided with remote STEM opportunities focused in robotics. In these programs, students not only gain a strong understanding of the fundamentals of robotics, but also develop crucial soft skills and best practices that will give them an academic and professional edge later in their lives. 
                         "
                         buttonText="Learn More"
                         buttonLink="/about"
