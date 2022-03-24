@@ -64,7 +64,7 @@ export default function Apply() {
                         </Box>
                         <Box>
                             <Heading as="h2" size="lg" mb="4" color='blue.dark'>
-                                If you are in 8th grade or over...
+                                If you are in 8th grade or above...
                             </Heading>
 
                             <Text fontSize='xl'>

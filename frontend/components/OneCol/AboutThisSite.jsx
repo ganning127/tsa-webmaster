@@ -11,7 +11,7 @@ export const AboutThisSite = () => {
         <Box maxW='800px' mx='auto'>
             <Fade>
                 <HeadingWithDesc>Overview</HeadingWithDesc>
-                <Text fontSize='xl'>RoboReach's website was created by Ganning Xu, Jacob Van Meter, Daniel Zhang, and Allison Zhang for the 2022 TSA conference</Text>
+                <Text fontSize='xl'>RoboReach's website was created by Ganning Xu, Jacob Van Meter, Daniel Zhang, Allison Zhang, and Max Caza for the 2022 TSA conference</Text>
 
                 <Box mt="4">
                     <Text fontSize='lg'><chakra.span fontWeight='bold'>Plan of work</chakra.span>: <Link href='/plan-of-work.pdf' color='blue.light' isExternal>PDF Log</Link></Text>

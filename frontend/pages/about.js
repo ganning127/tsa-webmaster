@@ -42,7 +42,7 @@ export default function Home() {
 
                     <TwoColTextWithPic
                         title="Our Mission"
-                        desc="For no cost, underprivileged students around the nation are provided with remote STEM opportunities focused in robotics. In these programs, students not only gain a foundation in key STEM principles but also advanced skills that give them an academic and professional edge. 
+                        desc="For no cost, underprivileged students around the nation are provided with remote STEM opportunities focused in robotics. In these programs, students not only gain a strong understanding of the fundamentals of robotics, but also develop crucial soft skills and practicies that will give them an academic and professional edge later in their lives. 
                         "
                         buttonText="Learn More"
                         buttonLink="/about"
@@ -56,12 +56,12 @@ export default function Home() {
                     <MedSep />
                     <SubSection
                         title="Our Story"
-                        desc="With the start of the coronavirus and all schools being shut down, we found that students were lacking continual learning stimulation over the summer with the loss of in person opportunities. Starting RoboReach, we aimed to create a program to fill this hole and provide STEM inspiration and opportunities to students. We strive to continue these efforts through and after the coronavirus pandemic in order to bridge accessibility and overcome the poverty gap. "
+                        desc="With COVID-19 shutting down schools and severely limiting extracurricular activities, we found that students were lacking continual learning stimulation over the summer with the loss of in person opportunities. In starting RoboReach we aimed to create a program to fill this gap and provide academic opportunities to students and inspire them to explore STEM. We strive to continue these efforts through and after the COVID-19 pandemic in order to allow all students to explore STEM from a young age. "
                     />
                     <MedSep />
                     <LeftTextWithButton
                         title="Our Vision"
-                        desc="Using a remote format, we seek to use technology to increase accessibility and awareness of STEM in these communities, reaching demographics that are lacking not only representation in STEM fields but general educational resources as well. We envision our organization expanding to bridge technology gaps not only locally but globally as well. "
+                        desc="In a remote format, we seek to use technology to increase accessibility and awareness of STEM in all communities, reaching demographics that are lacking not only representation in STEM fields but also general educational resources. We envision our organization expanding to bridge the digital divide not only locally but globally as well. "
                         button="Learn More"
                         buttonLink="/about"
                         image="/temp_vision.png"
