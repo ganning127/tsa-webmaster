@@ -26,8 +26,8 @@ export const AboutThisSite = () => {
                 <Text fontSize='xl' my="2">Roboreach is a non-profit organization that strives to bring technical education about robotics to everyone, regardless of previous experience and financial status. This website was built using React.js, Next.js, Next.js, ChakraUI, MongoDB, and Fastify.</Text>
                 <SimpleGrid columns={{ base: 1, md: 3 }} spacing={10} mt="8">
                     {Langs.languages.map((lang, index) => (
-                        <Box key={index} shadow='lg' rounded='md' p={4}>
-                            <Heading fontSize='3xl' color="text.dark" textAlign="center"><Link href={lang.url} isExternal _hover={{}}>{lang.name}</Link></Heading>
+                        <Box key={index} shadow='lg' p={4} _hover={{ bg: 'gray.100' }} rounded='md' transition='all 0.2s' as='a' href={lang.url} target="_blank">
+                            <Heading fontSize='3xl' color="text.dark" textAlign="center">{lang.name}</Heading>
                         </Box>
                     ))}
                 </SimpleGrid>
@@ -39,8 +39,8 @@ export const AboutThisSite = () => {
                 <SimpleGrid columns={{ base: 1, md: 3 }} spacingY={3} mt="8">
                     {
                         Sources.map((source, index) => (
-                            <Box key={index} mx='auto'>
-                                <Link href={source} isExternal _hover={{}} textAlign='center' >Image {index} (hyperlink)</Link>
+                            <Box key={index} mx='auto' _hover={{ bg: 'gray.100' }} p={1} rounded='md' transition='all 0.2s'>
+                                <Link href={source} isExternal _hover={{ color: 'blue.dark' }} textAlign='center' >Image {index + 1} (hyperlink)</Link>
                             </Box>
                         ))
                     }

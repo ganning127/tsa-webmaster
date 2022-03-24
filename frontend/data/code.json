@@ -3,7 +3,7 @@
         {
             "name": "Node.js",
             "desc": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.",
-            "url": "https://reactjs.org/"
+            "url": "https://nodejs.org/en/"
         },
         {
             "name": "React.js",
@@ -23,17 +23,17 @@
         {
             "name": "MongoDB",
             "desc": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.",
-            "url": "https://chakra-ui.com/"
+            "url": "https://www.mongodb.com/"
         },
         {
             "name": "Fastify",
             "desc": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.",
-            "url": "https://chakra-ui.com/"
+            "url": "https://www.fastify.io/"
         },
         {
             "name": "JWT",
             "desc": "React is a JavaScript library for building user interfaces. It is maintained by Facebook and a community of individual developers and companies. React can be used as a base in the development of single-page or mobile applications.",
-            "url": "https://chakra-ui.com/"
+            "url": "https://jwt.io/"
         }
     ]
 }
