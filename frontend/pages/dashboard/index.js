@@ -116,7 +116,7 @@ export default function Dashboard() {
               <Text fontSize="xl" color="green.dark">
                 Your program dates:
               </Text>
-              <Box bg="white" p={2} rounded="md">
+              <Box bg="white" p={2} rounded="md" shadow="md">
                 <Text fontSize="xl" color="text.dark" fontWeight="bold">
                   Meetings:
                 </Text>
